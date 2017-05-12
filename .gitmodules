@@ -1,0 +1,22 @@
+[submodule "layers/poky"]
+	path = layers/poky
+	url = https://git.yoctoproject.org/git/poky
+	branch = morty
+[submodule "layers/meta-openembedded"]
+	path = layers/meta-openembedded
+	url = https://github.com/openembedded/meta-openembedded.git
+	branch = morty
+[submodule "layers/meta-resin"]
+	path = layers/meta-resin
+	url = https://github.com/resin-os/meta-resin.git
+	branch = v2.0.3
+[submodule "layers/meta-tegra"]
+	path = layers/meta-tegra
+	url = https://github.com/madisongh/meta-tegra.git
+	branch = morty-l4t-r27.1
+[submodule "resin-yocto-scripts"]
+	path = resin-yocto-scripts
+	url = https://github.com/resin-os/resin-yocto-scripts.git
+[submodule "layers/oe-meta-go"]
+	path = layers/oe-meta-go
+	url = https://github.com/mem/oe-meta-go.git
