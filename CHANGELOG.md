@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update the resin-yocto-scripts submodule to HEAD of master [Florin]
 * Fix wireless chip  [Theodor]
 
 # v2.0.8+rev1 - 2017-07-06
