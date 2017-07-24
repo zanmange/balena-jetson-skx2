@@ -1,4 +1,4 @@
-#  resin-jentson repository
+#  resin-jetson repository
 
 ## Clone/Initialize the repository
 
