@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update the resin-yocto-scripts submodule to HEAD of master [Florin]
+
 # v2.1.0+rev2 - 2017-07-24
 
 * Switch from aufs to overlayfs for the docker storage driver [Florin]
