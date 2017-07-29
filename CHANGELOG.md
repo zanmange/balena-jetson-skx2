@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.2.0+rev1 - 2017-07-28
+
+* Update the meta-resin submodule to version v2.2.0 [Florin]
+* Update the resin-yocto-scripts submodule to HEAD of master [Florin]
+
 # v2.1.0+rev2 - 2017-07-24
 
 * Switch from aufs to overlayfs for the docker storage driver [Florin]
