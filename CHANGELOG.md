@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Re-work Nvidia Jetson TX2 to update all internal partitions [Theodor]
 * Include meta-rust layer [Will]
 * Add meta-rust layer [Will]
 
