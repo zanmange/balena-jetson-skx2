@@ -8,30 +8,23 @@ RESIN_CONFIGS[compat] = " \
 
 RESIN_CONFIGS_remove = "brcmfmac"
 
-KERNEL_ARG = "fbcon=map:0 console=tty0 console=ttyS0,115200n8 memtype=0 video=tegrafb no_console_suspend=1 earlycon=uart8250,mmio32,0x03100000 tegraid=18.1.2.0.0 tegra_keep_boot_clocks maxcpus=6 vpr_resize" 
-KERNEL_ROOTSPEC = "root=/dev/mmcblk\${devnum}p2 ro rootwait" 
+TEGRA_INITRAMFS_INITRD = "0"
+
+KERNEL_ROOTSPEC = "root=/dev/mmcblk\${devnum}p13 ro rootwait" 
 
 generate_extlinux_conf() {
-    install -d ${D}/${KERNEL_IMAGEDEST}/extlinux 
+    install -d ${D}/${KERNEL_IMAGEDEST}/extlinux
     rm -f ${D}/${KERNEL_IMAGEDEST}/extlinux/extlinux.conf
     cat >${D}/${KERNEL_IMAGEDEST}/extlinux/extlinux.conf << EOF
-DEFAULT primary-1
+DEFAULT primary
 TIMEOUT 30
 MENU TITLE Boot Options
-EOF
-    i=1
-    for f in ${KERNEL_DEVICETREE}; do
-        fdt=$(basename $f)
-        cat >>${D}/${KERNEL_IMAGEDEST}/extlinux/extlinux.conf << EOF
-LABEL primary-$i
-      MENU LABEL primary-$i ${KERNEL_IMAGETYPE} $fdt
+LABEL primary
+      MENU LABEL primary ${KERNEL_IMAGETYPE}
       LINUX /${KERNEL_IMAGETYPE}
-      FDT /devicetree-${KERNEL_IMAGETYPE}-$fdt
-      APPEND ${KERNEL_ARG} ${KERNEL_ROOTSPEC}
+      APPEND ${KERNEL_ARGS} ${KERNEL_ROOTSPEC}
 EOF
-        i=$(expr $i \+ 1)
-    done
-} 
+}
 
 do_deploy_append() {
     mkdir -p "${DEPLOYDIR}"

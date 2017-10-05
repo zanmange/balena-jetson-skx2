@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.7.2+rev1 - 2017-10-05
+
+* Update meta-resin submodule to v2.7.2 [Andrei]
+* Re-work Nvidia Jetson TX2 to update all internal partitions [Theodor]
 * Include meta-rust layer [Will]
 * Add meta-rust layer [Will]
 
