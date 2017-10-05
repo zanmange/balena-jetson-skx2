@@ -1,6 +1,8 @@
 Change log
 -----------
 
+# v2.7.2+rev2 - 2017-10-05
+
 * Fix boot partition index [Theodor]
 
 # v2.7.2+rev1 - 2017-10-05
