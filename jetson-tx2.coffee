@@ -13,7 +13,7 @@ module.exports =
 	version: 1
 	slug: 'jetson-tx2'
 	aliases: [ 'jetson-tx2' ]
-	name: 'Nvidia Jetson Tx2'
+	name: 'Nvidia Jetson TX2'
 	arch: 'aarch64'
 	state: 'experimental'
 
@@ -47,7 +47,7 @@ module.exports =
 	configuration:
 		config:
 			partition:
-				primary: 1
+				primary: 12
 			path: '/config.json'
 
 	initialization: commonImg.initialization
