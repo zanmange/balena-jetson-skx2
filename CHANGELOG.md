@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Fix boot partition index [Theodor]
+
 # v2.7.2+rev1 - 2017-10-05
 
 * Update meta-resin submodule to v2.7.2 [Andrei]
