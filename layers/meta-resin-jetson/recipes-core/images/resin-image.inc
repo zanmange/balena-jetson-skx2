@@ -26,7 +26,7 @@ python__anonymous() {
 PARTITION_TABLE_TYPE = "gpt"
 DEVICE_SPECIFIC_SPACE = "49152"
 
-IMAGE_DEPENDS_resinos-img_append = " tegra-binaries-prepare-native:do_deploy"
+IMAGE_DEPENDS_resinos-img_append = " tegra-binaries-prepare:do_deploy"
 
 device_specific_configuration() {
     DEPLOYDIR="${TMPDIR}/deploy/images/${MACHINE}"

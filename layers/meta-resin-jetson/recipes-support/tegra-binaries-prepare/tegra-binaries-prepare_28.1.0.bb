@@ -3,10 +3,13 @@ SUMMARY = "Prepare bsp binaries for flashing"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${RESIN_COREBASE}/COPYING.Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
 
-DEPENDS_class-native = "tegra-binaries"
+DEPENDS = "tegra-binaries"
 
-inherit deploy native
-SRC_URI = "file://flash.xml"
+inherit deploy
+SRC_URI = " \
+    file://flash.xml \
+    file://partition_specification.txt \
+    "
 
 SHARED = "${TMPDIR}/work-shared/L4T-${SOC_FAMILY}-${PV}-${PR}/Linux_for_Tegra"
 B = "${WORKDIR}/build"
@@ -44,7 +47,18 @@ do_compile() {
 do_deploy() {
     install -d ${DEPLOYDIR}/tegra-binaries-signed
     cp ${B}/*.encrypt ${DEPLOYDIR}/tegra-binaries-signed
+    cp ${WORKDIR}/partition_specification.txt ${DEPLOYDIR}/tegra-binaries-signed
 }
+
+do_install() {
+    install -d ${D}/opt/tegra-binaries-signed
+    cp -r ${B}/*.encrypt ${D}/opt/tegra-binaries-signed
+    cp ${WORKDIR}/partition_specification.txt ${D}/opt/tegra-binaries-signed
+    cp ${DEPLOY_DIR_IMAGE}/u-boot-jetson-tx2.bin ${D}/opt/tegra-binaries-signed
+    cp ${DEPLOY_DIR_IMAGE}/Image-tegra186-quill-p3310-1000-c03-00-base.dtb ${D}/opt/tegra-binaries-signed
+}
+
+FILES_${PN} += "/opt"
 
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
