@@ -10,7 +10,7 @@ RESIN_CONFIGS_remove = "brcmfmac"
 
 TEGRA_INITRAMFS_INITRD = "0"
 
-KERNEL_ROOTSPEC = "root=/dev/mmcblk\${devnum}p13 ro rootwait" 
+KERNEL_ROOTSPEC = "\${resin_kernel_root} ro rootwait" 
 
 generate_extlinux_conf() {
     install -d ${D}/${KERNEL_IMAGEDEST}/extlinux
