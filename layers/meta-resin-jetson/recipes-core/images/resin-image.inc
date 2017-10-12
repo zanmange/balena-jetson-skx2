@@ -8,6 +8,7 @@ RESIN_BOOT_PARTITION_FILES = " \
                                                                                                                                                                                                             
 # We chose this value so that the space resinOS takes will amount to 1GiB
 IMAGE_ROOTFS_SIZE = "487424" 
+RESIN_BOOT_SIZE = "80960"
                                                                                                                                                                             
 python__anonymous() {                                                                                                                                                                                       
     import re                                                                                                                                                                                               
