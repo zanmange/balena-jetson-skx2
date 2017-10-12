@@ -1,5 +1,8 @@
 inherit kernel-resin deploy
 
+FILESEXTRAPATHS_append := ":${THISDIR}/${PN}"
+SRC_URI_append = " file://tegra186-tx2-cti-ASG916.dtb"
+
 RESIN_CONFIGS_append = " compat"
 
 RESIN_CONFIGS[compat] = " \
@@ -10,7 +13,7 @@ RESIN_CONFIGS_remove = "brcmfmac"
 
 TEGRA_INITRAMFS_INITRD = "0"
 
-KERNEL_ROOTSPEC = "root=/dev/mmcblk\${devnum}p13 ro rootwait" 
+KERNEL_ROOTSPEC = "\${resin_kernel_root} ro rootwait" 
 
 generate_extlinux_conf() {
     install -d ${D}/${KERNEL_IMAGEDEST}/extlinux
@@ -29,4 +32,6 @@ EOF
 do_deploy_append() {
     mkdir -p "${DEPLOYDIR}"
     install -m 0600 "${D}/boot/extlinux/extlinux.conf" "${DEPLOYDIR}"
+
+    cp ${WORKDIR}/tegra186-tx2-cti-ASG916.dtb "${DEPLOYDIR}"
 }
