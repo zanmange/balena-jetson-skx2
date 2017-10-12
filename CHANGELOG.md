@@ -1,6 +1,9 @@
 Change log
 -----------
 
+* Support new device type: Nvidia Jetson TX2 with Skycatch carrier board [Theodor]
+* Integrate with resin u-boot [Theodor]
+
 # v2.7.2+rev2 - 2017-10-05
 
 * Fix boot partition index [Theodor]
