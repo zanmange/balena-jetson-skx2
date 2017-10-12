@@ -1,5 +1,8 @@
 inherit kernel-resin deploy
 
+FILESEXTRAPATHS_append := ":${THISDIR}/${PN}"
+SRC_URI_append = " file://tegra186-tx2-cti-ASG916.dtb"
+
 RESIN_CONFIGS_append = " compat"
 
 RESIN_CONFIGS[compat] = " \
@@ -29,4 +32,6 @@ EOF
 do_deploy_append() {
     mkdir -p "${DEPLOYDIR}"
     install -m 0600 "${D}/boot/extlinux/extlinux.conf" "${DEPLOYDIR}"
+
+    cp ${WORKDIR}/tegra186-tx2-cti-ASG916.dtb "${DEPLOYDIR}"
 }
