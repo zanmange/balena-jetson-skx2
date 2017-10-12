@@ -3,7 +3,7 @@ SUMMARY = "Prepare bsp binaries for flashing"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${RESIN_COREBASE}/COPYING.Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
 
-DEPENDS = "tegra-binaries"
+DEPENDS = "virtual/kernel tegra-binaries"
 
 inherit deploy
 SRC_URI = " \
@@ -14,6 +14,15 @@ SRC_URI = " \
 SHARED = "${TMPDIR}/work-shared/L4T-${SOC_FAMILY}-${PV}-${PR}/Linux_for_Tegra"
 B = "${WORKDIR}/build"
 S = "${WORKDIR}"
+
+DTB_jetson-tx2 = "${SHARED}/kernel/dtb/tegra186-quill-p3310-1000-c03-00-base.dtb"
+DTB_jetson-tx2-skycatch = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG916.dtb"
+
+do_configure() {
+    dtb_name=$(basename ${DTB} | cut -d '.' -f 1)
+    sed -i -e "s/\[DTB_NAME\]/$dtb_name/g" ${WORKDIR}/flash.xml
+    sed -i -e "s/\[DTB_NAME\]/$dtb_name/g" ${WORKDIR}/partition_specification.txt
+}
 
 do_compile() {
     tegrahost="${SHARED}/bootloader/tegrahost_v2"
@@ -29,13 +38,13 @@ do_compile() {
         ${SHARED}/bootloader/camera-rtcpu-sce.bin \
         ${SHARED}/bootloader/t186ref/warmboot.bin \
         ${SHARED}/bootloader/t186ref/tegra186-a02-bpmp-quill-p3310-1000-c01-00-te770d-ucm2.dtb \
-        ${SHARED}/kernel/dtb/tegra186-quill-p3310-1000-c03-00-base.dtb \
+        ${DTB} \
         "
 
     for file in $files; do
         cp $file ${B}
     done
-    
+
     cp ${WORKDIR}/flash.xml ${B}
 
     ${tegraparser} --pt flash.xml
@@ -48,6 +57,7 @@ do_deploy() {
     install -d ${DEPLOYDIR}/tegra-binaries-signed
     cp ${B}/*.encrypt ${DEPLOYDIR}/tegra-binaries-signed
     cp ${WORKDIR}/partition_specification.txt ${DEPLOYDIR}/tegra-binaries-signed
+    cp ${DTB} ${DEPLOYDIR}
 }
 
 do_install() {
@@ -55,7 +65,7 @@ do_install() {
     cp -r ${B}/*.encrypt ${D}/opt/tegra-binaries-signed
     cp ${WORKDIR}/partition_specification.txt ${D}/opt/tegra-binaries-signed
     cp ${DEPLOY_DIR_IMAGE}/u-boot-jetson-tx2.bin ${D}/opt/tegra-binaries-signed
-    cp ${DEPLOY_DIR_IMAGE}/Image-tegra186-quill-p3310-1000-c03-00-base.dtb ${D}/opt/tegra-binaries-signed
+    cp ${DTB} ${D}/opt/tegra-binaries-signed
 }
 
 FILES_${PN} += "/opt"
