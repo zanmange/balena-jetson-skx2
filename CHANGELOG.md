@@ -1,6 +1,8 @@
 Change log
 -----------
 
+# v2.7.2+rev5 - 2017-10-12
+
 * Update resin-yocto-scripts to latest [Theodor]
 
 # v2.7.2+rev4 - 2017-10-12
