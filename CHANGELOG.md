@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.7.2+rev6 - 2017-10-16
+
+* Release Nvidia TX2 with Skycatch carrier board [Theodor]
+
 # v2.7.2+rev5 - 2017-10-12
 
 * Update resin-yocto-scripts to latest [Theodor]
