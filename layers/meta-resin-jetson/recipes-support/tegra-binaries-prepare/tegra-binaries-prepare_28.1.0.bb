@@ -64,7 +64,7 @@ do_install() {
     install -d ${D}/opt/tegra-binaries-signed
     cp -r ${B}/*.encrypt ${D}/opt/tegra-binaries-signed
     cp ${WORKDIR}/partition_specification.txt ${D}/opt/tegra-binaries-signed
-    cp ${DEPLOY_DIR_IMAGE}/u-boot-jetson-tx2.bin ${D}/opt/tegra-binaries-signed
+    cp ${DEPLOY_DIR_IMAGE}/u-boot-dtb.bin ${D}/opt/tegra-binaries-signed
     cp ${DTB} ${D}/opt/tegra-binaries-signed
 }
 
@@ -74,6 +74,8 @@ INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 
 do_configure[depends] += "tegra-binaries:do_preconfigure"
+do_compile[depends] += "virtual/kernel:do_deploy"
+do_install[depends] += "virtual/kernel:do_deploy"
 do_populate_lic[depends] += "tegra-binaries:do_unpack"
 
 addtask do_deploy before do_package after do_install
