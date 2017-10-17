@@ -13,7 +13,7 @@ module.exports =
 	version: 1
 	slug: 'jetson-tx2-skycatch'
 	aliases: [ 'jetson-tx2-skycatch' ]
-	name: 'Nvidia Jetson TX2'
+	name: 'Nvidia Jetson TX2 Skycatch'
 	arch: 'aarch64'
 	state: 'experimental'
 
