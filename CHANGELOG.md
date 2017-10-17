@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update poky to latest pyro branch [Will]
+
 # v2.7.2+rev8 - 2017-10-17
 
 * Fix name clash between device types [Theodor]
