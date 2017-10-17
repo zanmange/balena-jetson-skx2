@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.7.2+rev9 - 2017-10-17
+
+* Rename device-type to SKX2 [Theodor]
+
 # v2.7.2+rev8 - 2017-10-17
 
 * Fix name clash between device types [Theodor]
