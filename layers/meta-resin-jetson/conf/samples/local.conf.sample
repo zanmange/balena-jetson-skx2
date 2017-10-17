@@ -1,6 +1,6 @@
 # Supported machines
 #MACHINE ?= "jetson-tx2"
-#MACHINE ?= "jetson-tx2-skycatch"
+#MACHINE ?= "SKX2"
 
 # We use the overlayfs docker storage driver on the Nvidia Jetson tx2
 DOCKER_STORAGE = "overlay2"

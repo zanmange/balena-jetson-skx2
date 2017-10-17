@@ -7,11 +7,11 @@ Change log
 
 # v2.7.2+rev7 - 2017-10-16
 
-* Add an icon to the Nvidia TX2 with Skycatch carrier board [Theodor]
+* Add an icon to the SKX2 [Theodor]
 
 # v2.7.2+rev6 - 2017-10-16
 
-* Release Nvidia TX2 with Skycatch carrier board [Theodor]
+* Release SKX2 [Theodor]
 
 # v2.7.2+rev5 - 2017-10-12
 
@@ -23,7 +23,7 @@ Change log
 
 # v2.7.2+rev3 - 2017-10-12
 
-* Support new device type: Nvidia Jetson TX2 with Skycatch carrier board [Theodor]
+* Support new device type: SKX2 [Theodor]
 * Integrate with resin u-boot [Theodor]
 
 # v2.7.2+rev2 - 2017-10-05
