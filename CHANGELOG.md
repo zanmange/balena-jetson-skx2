@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.7.2+rev8 - 2017-10-17
+
+* Fix name clash between device types [Theodor]
+
 # v2.7.2+rev7 - 2017-10-16
 
 * Add an icon to the Nvidia TX2 with Skycatch carrier board [Theodor]
