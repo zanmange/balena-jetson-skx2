@@ -1,6 +1,9 @@
 Change log
 -----------
 
+* Update meta-openembedded to latest pyro branch [Will]
+* Update poky to latest pyro branch [Will]
+
 # v2.7.2+rev9 - 2017-10-17
 
 * Rename device-type to SKX2 [Theodor]
