@@ -14,24 +14,36 @@ RESIN_CONFIGS_remove = "brcmfmac"
 TEGRA_INITRAMFS_INITRD = "0"
 
 KERNEL_ROOTSPEC = "\${resin_kernel_root} ro rootwait" 
+KERNEL_ROOTSPEC_FLASHER = "root=/dev/mmcblk1p13 ro rootwait" 
 
 generate_extlinux_conf() {
     install -d ${D}/${KERNEL_IMAGEDEST}/extlinux
     rm -f ${D}/${KERNEL_IMAGEDEST}/extlinux/extlinux.conf
-    cat >${D}/${KERNEL_IMAGEDEST}/extlinux/extlinux.conf << EOF
+    rm -f ${D}/${KERNEL_IMAGEDEST}/extlinux/extlinux.conf_flasher
+    kernelRootspec="${KERNEL_ROOTSPEC}" ; cat >${D}/${KERNEL_IMAGEDEST}/extlinux/extlinux.conf << EOF
 DEFAULT primary
 TIMEOUT 30
 MENU TITLE Boot Options
 LABEL primary
       MENU LABEL primary ${KERNEL_IMAGETYPE}
       LINUX /${KERNEL_IMAGETYPE}
-      APPEND ${KERNEL_ARGS} ${KERNEL_ROOTSPEC}
+      APPEND ${KERNEL_ARGS} ${kernelRootspec}
+EOF
+    kernelRootspec="${KERNEL_ROOTSPEC_FLASHER}" ; cat >${D}/${KERNEL_IMAGEDEST}/extlinux/extlinux.conf_flasher << EOF
+DEFAULT primary
+TIMEOUT 30
+MENU TITLE Boot Options
+LABEL primary
+      MENU LABEL primary ${KERNEL_IMAGETYPE}
+      LINUX /${KERNEL_IMAGETYPE}
+      APPEND ${KERNEL_ARGS} ${kernelRootspec}
 EOF
 }
 
 do_deploy_append() {
     mkdir -p "${DEPLOYDIR}"
     install -m 0600 "${D}/boot/extlinux/extlinux.conf" "${DEPLOYDIR}"
+    install -m 0600 "${D}/boot/extlinux/extlinux.conf_flasher" "${DEPLOYDIR}"
 
     cp ${WORKDIR}/tegra186-tx2-cti-ASG916.dtb "${DEPLOYDIR}"
 }

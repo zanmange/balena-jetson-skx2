@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.7.2+rev10 - 2017-10-18
+
+* Fix root kernel parameter for resin-image-flasher [Theodor]
 * Update meta-openembedded to latest pyro branch [Will]
 * Update poky to latest pyro branch [Will]
 
