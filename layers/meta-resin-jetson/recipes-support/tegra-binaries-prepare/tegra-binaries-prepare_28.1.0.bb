@@ -16,7 +16,7 @@ B = "${WORKDIR}/build"
 S = "${WORKDIR}"
 
 DTB_jetson-tx2 = "${SHARED}/kernel/dtb/tegra186-quill-p3310-1000-c03-00-base.dtb"
-DTB_jetson-tx2-skycatch = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG916.dtb"
+DTB_skx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG916.dtb"
 
 do_configure() {
     dtb_name=$(basename ${DTB} | cut -d '.' -f 1)
