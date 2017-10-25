@@ -8,8 +8,14 @@ RESIN_CONFIGS_append = " compat"
 RESIN_CONFIGS[compat] = " \
     CONFIG_COMPAT=y \
     "
-
 RESIN_CONFIGS_remove = "brcmfmac"
+
+RESIN_CONFIGS_append_skx2 = " cdc_acm wdm"
+
+RESIN_CONFIGS_DEPS[cdc_acm] = "CONFIG_TTY=y"
+RESIN_CONFIGS[cdc_acm] = "CONFIG_USB_ACM=m"
+
+RESIN_CONFIGS[wdm] = "CONFIG_USB_WDM=m"
 
 TEGRA_INITRAMFS_INITRD = "0"
 
