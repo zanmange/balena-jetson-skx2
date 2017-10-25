@@ -1,6 +1,9 @@
 Change log
 -----------
 
+* Include cdc_amc and cdc_wdm module for the skx2 [Theodor]
+* Various bug fixes [Theodor]
+
 # v2.7.2+rev10 - 2017-10-18
 
 * Fix root kernel parameter for resin-image-flasher [Theodor]

@@ -11,9 +11,9 @@ postProvisioningInstructions = [
 
 module.exports =
 	version: 1
-	slug: 'SKX2'
+	slug: 'skx2'
 	aliases: [ 'Nvidia Jetson TX2' ]
-	name: 'SKX2'
+	name: 'skx2'
 	arch: 'aarch64'
 	state: 'experimental'
 
@@ -35,11 +35,11 @@ module.exports =
 	supportsBlink: false
 
 	yocto:
-		machine: 'SKX2'
+		machine: 'skx2'
 		image: 'resin-image-flasher'
 		fstype: 'resinos-img'
 		version: 'yocto-pyro'
-		deployArtifact: 'resin-image-flasher-SKX2.resinos-img'
+		deployArtifact: 'resin-image-flasher-skx2.resinos-img'
 		compressed: true
 
 	options: [ networkOptions.group ]

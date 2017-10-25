@@ -25,10 +25,10 @@ index 9ecaf38..cf61c1f 100644
  	BOOT_TARGET_DEVICES(BOOTENV_DEV)                                  \
  	\
  	"distro_bootcmd=" BOOTENV_SET_SCSI_NEED_INIT                      \
-+ "setenv resin_kernel_load_addr ${loadaddr};"               \
++ "setenv resin_kernel_load_addr ${loadaddr}; "               \
  		"for target in ${boot_targets}; do "                      \
 -			"run bootcmd_${target}; "                         \
-+      "if env exist resin_set_kernel_root; then"                   \
++      "if env exist resin_set_kernel_root; then "                   \
 +        "run resin_set_kernel_root; "                     \
 +			  "run bootcmd_${target}; "                         \
 +      "fi; "                                            \

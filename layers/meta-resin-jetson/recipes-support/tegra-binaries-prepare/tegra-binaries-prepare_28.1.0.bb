@@ -3,7 +3,7 @@ SUMMARY = "Prepare bsp binaries for flashing"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${RESIN_COREBASE}/COPYING.Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
 
-DEPENDS = "virtual/kernel tegra-binaries"
+DEPENDS = "virtual/bootloader virtual/kernel tegra-binaries"
 
 inherit deploy
 SRC_URI = " \
@@ -16,7 +16,7 @@ B = "${WORKDIR}/build"
 S = "${WORKDIR}"
 
 DTB_jetson-tx2 = "${SHARED}/kernel/dtb/tegra186-quill-p3310-1000-c03-00-base.dtb"
-DTB_jetson-tx2-skycatch = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG916.dtb"
+DTB_skx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG916.dtb"
 
 do_configure() {
     dtb_name=$(basename ${DTB} | cut -d '.' -f 1)
