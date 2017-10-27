@@ -12,8 +12,8 @@ postProvisioningInstructions = [
 module.exports =
 	version: 1
 	slug: 'skx2'
-	aliases: [ 'Nvidia Jetson TX2' ]
-	name: 'skx2'
+	aliases: [ 'skx2' ]
+	name: 'Nvidia Jetson TX2 SK'
 	arch: 'aarch64'
 	state: 'experimental'
 
