@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Rename skx2 to Nvidia Jetson TX2 SK [Theodor]
+
 # v2.7.4+rev1
 ## 2017-10-18
 
