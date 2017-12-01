@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.8.1+rev1
+## 2017-12-01
+
+* Update meta-resin to include kernel header fix [Theodor]
+
 # v2.7.4+rev2
 ## 2017-10-27
 
