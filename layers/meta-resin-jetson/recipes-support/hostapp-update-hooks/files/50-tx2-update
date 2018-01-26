@@ -2,7 +2,7 @@
 
 set -o errexit
 
-export DOCKER_HOST="unix:///var/run/docker-host.sock"
+export DOCKER_HOST="unix:///var/run/balena-host.sock"
 container_id=$1
 
 update_dir="update-tegra-binaries"
@@ -12,13 +12,13 @@ flash() {
         part_name=$(echo $line | cut -d ':' -f 1) 
         file_name=$(echo $line | cut -d ':' -f 2)
         
-        docker cp "$container_id:/opt/tegra-binaries-signed/$file_name" "/tmp/$update_dir/$file_name"
+        balena cp "$container_id:/opt/tegra-binaries-signed/$file_name" "/tmp/$update_dir/$file_name"
         dd oflag=dsync if="/tmp/$update_dir/$file_name" of="/dev/disk/by-partlabel/$part_name"
     done
 }
 
 mkdir "/tmp/$update_dir"
-docker cp "$container_id:/opt/tegra-binaries-signed/partition_specification.txt" "/tmp/$update_dir"
+balena cp "$container_id:/opt/tegra-binaries-signed/partition_specification.txt" "/tmp/$update_dir"
 
 flash "/tmp/$update_dir/partition_specification.txt"
 rm -rf "/tmp/$update_dir"
