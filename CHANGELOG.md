@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.9.7+rev1
+## 2018-01-26
+
+* Update rein-yocto-scripts to latest [Theodor]
+* Update meta-resin submodule to v2.9.6 [Theodor]
+
 # v2.8.1+rev2
 ## 2017-12-21
 
