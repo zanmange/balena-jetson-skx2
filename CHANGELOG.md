@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.9.7+rev2
+## 2018-01-29
+
+* Fix hostapps-update [Theodor]
+
 # v2.9.7+rev1
 ## 2018-01-26
 
