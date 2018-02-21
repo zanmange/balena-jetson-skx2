@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.9.7+rev4
+## 2018-02-21
+
+* Rework the way we generate tegra binaries [Theodor]
+* Generate boot0 image so we can correctly configure the partition table [Theodor]
+
 # v2.9.7+rev3
 ## 2018-02-13
 
