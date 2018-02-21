@@ -18,6 +18,9 @@ S = "${WORKDIR}"
 DTB_jetson-tx2 = "${SHARED}/kernel/dtb/tegra186-quill-p3310-1000-c03-00-base.dtb"
 DTB_skx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG916.dtb"
 
+BOOT0 = "boot0.img"
+BINARY_INSTALL_PATH = "/opt/tegra-binaries"
+
 do_configure() {
     dtb_name=$(basename ${DTB} | cut -d '.' -f 1)
     sed -i -e "s/\[DTB_NAME\]/$dtb_name/g" ${WORKDIR}/flash.xml
@@ -25,9 +28,7 @@ do_configure() {
 }
 
 do_compile() {
-    tegrahost="${SHARED}/bootloader/tegrahost_v2"
-    tegraparser="${SHARED}/bootloader/tegraparser_v2"
-    tegrasign="${SHARED}/bootloader/tegrasign_v2"
+    tegraflash="${SHARED}/bootloader/tegraflash.py"
 
     files=" \
         ${SHARED}/bootloader/mce_mts_d15_prod_cr.bin \ 
@@ -39,47 +40,98 @@ do_compile() {
         ${SHARED}/bootloader/t186ref/warmboot.bin \
         ${SHARED}/bootloader/t186ref/tegra186-a02-bpmp-quill-p3310-1000-c01-00-te770d-ucm2.dtb \
         ${DTB} \
+        \
+        ${SHARED}/bootloader/t186ref/BCT/P3310_A00_8GB_Samsung_8GB_lpddr4_204Mhz_A02_l4t.cfg \
+        ${SHARED}/bootloader/t186ref/BCT/tegra186-mb1-bct-misc-si-l4t.cfg \
+        ${SHARED}/bootloader/t186ref/BCT/tegra186-mb1-bct-pinmux-quill-p3310-1000-c03.cfg \
+        ${SHARED}/bootloader/t186ref/BCT/tegra186-mb1-bct-pmic-quill-p3310-1000-c03.cfg \
+        ${SHARED}/bootloader/t186ref/BCT/tegra186-mb1-bct-pad-quill-p3310-1000-c03.cfg \
+        ${SHARED}/bootloader/t186ref/BCT/tegra186-mb1-bct-prod-quill-p3310-1000-c03.cfg \
+        ${SHARED}/bootloader/t186ref/BCT/tegra186-mb1-bct-bootrom-quill-p3310-1000-c03.cfg \
+        ${SHARED}/bootloader/t186ref/BCT/mobile_scr.cfg \
+        ${SHARED}/bootloader/t186ref/BCT/minimal_scr.cfg \
+        ${SHARED}/bootloader/t186ref/BCT/emmc.cfg \
+        \
+        ${SHARED}/bootloader/t186ref/nvtboot.bin \
+        ${SHARED}/bootloader/nvtboot_cpu.bin \
+        ${SHARED}/bootloader/mb1_recovery_prod.bin \
+        ${SHARED}/bootloader/nvtboot_recovery.bin \
+        ${SHARED}/bootloader/preboot_d15_prod_cr.bin \
+        ${SHARED}/bootloader/mce_mts_d15_prod_cr.bin \
+        ${SHARED}/bootloader/mb1_prod.bin \
+        ${SHARED}/bootloader/spe.bin \
+        ${SHARED}/bootloader/nvtboot_recovery_cpu.bin \
         "
 
     for file in $files; do
         cp $file ${B}
     done
 
-    cp ${WORKDIR}/flash.xml ${B}
+    cp ${WORKDIR}/flash.xml ${B}/flash.xml
+    
+    ${tegraflash} --bl nvtboot_recovery_cpu.bin --sdram_config P3310_A00_8GB_Samsung_8GB_lpddr4_204Mhz_A02_l4t.cfg --odmdata 0x1090000 --applet mb1_recovery_prod.bin --cmd "flash" --cfg flash.xml --chip 0x18 --misc_config tegra186-mb1-bct-misc-si-l4t.cfg --pinmux_config tegra186-mb1-bct-pinmux-quill-p3310-1000-c03.cfg --pmic_config tegra186-mb1-bct-pmic-quill-p3310-1000-c03.cfg --pmc_config tegra186-mb1-bct-pad-quill-p3310-1000-c03.cfg --prod_config tegra186-mb1-bct-prod-quill-p3310-1000-c03.cfg --scr_config minimal_scr.cfg --scr_cold_boot_config mobile_scr.cfg --br_cmd_config tegra186-mb1-bct-bootrom-quill-p3310-1000-c03.cfg --dev_params emmc.cfg  --bins "mb2_bootloader nvtboot_recovery.bin; mts_preboot preboot_d15_prod_cr.bin; mts_bootpack mce_mts_d15_prod_cr.bin; bpmp_fw bpmp.bin; bpmp_fw_dtb $(basename ${DTB}); tlk tos.img; eks eks.img; bootloader_dtb tegra186-quill-p3310-1000-c03-00-base.dtb" --keep & export _PID=$! ; wait ${_PID} || true
 
-    ${tegraparser} --pt flash.xml
-    ${tegrahost} --chip 0x18 --partitionlayout flash.bin --list images_list.xml zerosbk
-    ${tegrasign} --key None --list images_list.xml --pubkeyhash pub_key.key
-    ${tegrahost} --chip 0x18 --partitionlayout flash.bin --updatesig images_list_signed.xml
+    # Create boot table
+    # BCT
+    cat ${B}/${_PID}/br_bct_BR.bct > ${B}/${BOOT0}
+    cat ${B}/${_PID}/br_bct_BR.bct >> ${B}/${BOOT0}
+    dd if=/dev/zero bs=16 count=576 >> ${B}/${BOOT0}
+    cat ${B}/${_PID}/br_bct_BR.bct >> ${B}/${BOOT0}
+    dd if=/dev/zero bs=16 count=800 >> ${B}/${BOOT0}
 
-    # Append validation bytes to our files
-    cat ${B}/tos_sigheader.img.hash >> eks_sigheader.img.encrypt
-    cat ${B}/eks_sigheader.img.hash >> bpmp_sigheader.img.encrypt
-    cat ${B}/eks_sigheader.img.hash >> tegra186-a02-bpmp-quill-p3310-1000-c01-00-te770d-ucm2_sigheader.dtb.encrypt
-    cat ${B}/eks_sigheader.img.hash >> camera-rtcpu-sce_sigheader.bin.encrypt
-    # Warmboot magic
-    dd if=/dev/zero bs=1 count=8 >> warmboot_wbheader.bin.encrypt
-    cat ${B}/camera-rtcpu-sce_sigheader.bin.hash >> warmboot_wbheader.bin.encrypt
-    dd if=/dev/zero bs=1 count=360 >> warmboot_wbheader.bin.encrypt
-    dd if=${B}/camera-rtcpu-sce_sigheader.bin.encrypt bs=1 skip=384 count=48 >> warmboot_wbheader.bin.encrypt
-}
+    # MB1
+    cat ${B}/${_PID}/mb1_prod.bin.encrypt >> ${B}/${BOOT0}
+    dd if=/dev/zero bs=16 count=10480 >> ${B}/${BOOT0}
 
-do_deploy() {
-    install -d ${DEPLOYDIR}/tegra-binaries-signed
-    cp ${B}/*.encrypt ${DEPLOYDIR}/tegra-binaries-signed
-    cp ${WORKDIR}/partition_specification.txt ${DEPLOYDIR}/tegra-binaries-signed
-    cp ${DTB} ${DEPLOYDIR}
+    # MB1 BCT
+    cat ${B}/${_PID}/mb1_cold_boot_bct_MB1_sigheader.bct.encrypt >> ${B}/${BOOT0}
+    dd if=/dev/zero bs=16 count=969 >> ${B}/${BOOT0}
+
+    # SPE
+    cat ${B}/${_PID}/spe_sigheader.bin.encrypt >> ${B}/${BOOT0}
+    dd if=/dev/zero bs=16 count=1 >> ${B}/${BOOT0}
+    dd if=${B}/${_PID}/mb1_prod.bin bs=16 count=5 skip=1 >> ${B}/${BOOT0}
+    dd if=/dev/zero bs=16 count=3840 >> ${B}/${BOOT0}
+    
+    # MB2
+    cat ${B}/${_PID}/nvtboot_sigheader.bin.encrypt >> ${B}/${BOOT0}
+    dd if=/dev/zero bs=1 count=4 >> ${B}/${BOOT0}
+    dd if=${B}/${_PID}/spe_sigheader.bin.encrypt bs=1 skip=4 count=476 >> ${B}/${BOOT0}
+    dd if=/dev/zero bs=16 count=10240 >> ${B}/${BOOT0}
+
+    # MTS-PREBOOT
+    cat ${B}/${_PID}/preboot_d15_prod_cr_sigheader.bin.encrypt >> ${B}/${BOOT0}
+    dd if=/dev/zero bs=1 count=8 >> ${B}/${BOOT0}
+    dd if=${B}/${_PID}/nvtboot_sigheader.bin.encrypt bs=8 skip=1 count=59 >> ${B}/${BOOT0}
+    dd if=/dev/zero bs=16 count=211168 >> ${B}/${BOOT0}
+
+    mkdir -p ${B}/out
+    cp -r ${B}/${_PID}/* ${B}/out
+    rm -rf ${B}/${_PID}
 }
 
 do_install() {
-    install -d ${D}/opt/tegra-binaries-signed
-    cp -r ${B}/*.encrypt ${D}/opt/tegra-binaries-signed
-    cp ${WORKDIR}/partition_specification.txt ${D}/opt/tegra-binaries-signed
-    cp ${DEPLOY_DIR_IMAGE}/u-boot-dtb.bin ${D}/opt/tegra-binaries-signed
-    cp ${DTB} ${D}/opt/tegra-binaries-signed
+    install -d ${D}/${BINARY_INSTALL_PATH}
+
+    files=$(cat ${WORKDIR}/partition_specification.txt | grep -v :u-boot)
+
+    for file in $files; do
+        file_name=$(echo $file | cut -d ':' -f 2)
+        cp ${B}/out/$file_name ${D}/${BINARY_INSTALL_PATH}
+    done
+
+    cp ${WORKDIR}/partition_specification.txt ${D}/${BINARY_INSTALL_PATH}
+    cp ${B}/${BOOT0} ${D}/${BINARY_INSTALL_PATH}
+
+    cp ${DEPLOY_DIR_IMAGE}/u-boot-dtb.bin ${D}/${BINARY_INSTALL_PATH}
 }
 
-FILES_${PN} += "/opt"
+do_deploy() {
+    mkdir -p ${DEPLOYDIR}/$(basename ${BINARY_INSTALL_PATH})
+    cp -r ${D}/${BINARY_INSTALL_PATH}/* ${DEPLOYDIR}/$(basename ${BINARY_INSTALL_PATH})
+}
+
+FILES_${PN} += "${BINARY_INSTALL_PATH}"
 
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
