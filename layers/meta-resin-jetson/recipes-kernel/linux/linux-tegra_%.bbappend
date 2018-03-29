@@ -1,14 +1,27 @@
 inherit kernel-resin deploy
 
 FILESEXTRAPATHS_append := ":${THISDIR}/${PN}"
-SRC_URI_append = " file://tegra186-tx2-cti-ASG916.dtb"
+SRC_URI_append = " \
+    file://0001-Expose-spidev-to-the-userspace.patch \
+    file://tegra186-tx2-cti-ASG916.dtb \
+    "
 
-RESIN_CONFIGS_append = " compat"
+RESIN_CONFIGS_append = " compat spi"
+RESIN_CONFIGS_remove = "brcmfmac"
 
 RESIN_CONFIGS[compat] = " \
     CONFIG_COMPAT=y \
     "
-RESIN_CONFIGS_remove = "brcmfmac"
+
+RESIN_CONFIGS[spi] = " \
+		CONFIG_SPI=y \
+		CONFIG_SPI_MASTER=y \
+		CONFIG_SPI_SPIDEV=m \
+		"
+RESIN_CONFIGS_DEPS[spi] = " \
+		CONFIG_QSPI_TEGRA186=y \
+		CONFIG_SPI_TEGRA144=y \
+		"
 
 RESIN_CONFIGS_append_skx2 = " cdc_acm wdm"
 

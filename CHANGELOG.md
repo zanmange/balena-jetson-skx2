@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Default enable of spi dev in userspace [Theodor]
 * Upgrade to l4t 28.2.0 [Theodor]
 
 # v2.12.5+rev2

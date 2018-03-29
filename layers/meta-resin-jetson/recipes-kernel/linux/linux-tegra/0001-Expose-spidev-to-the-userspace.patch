@@ -1,0 +1,35 @@
+From bc5036ee5ec6d25ff32ea4ffa55f389b96dca404 Mon Sep 17 00:00:00 2001
+From: Theodor Gherzan <theodor@resin.io>
+Date: Thu, 29 Mar 2018 14:06:52 +0200
+Subject: [PATCH] Expose spidev to the userspace
+
+Upstream-Status: Inappropriate [configuration]
+Signed-off-by: Theodor Gherzan <theodor@resin.io>
+---
+ nvidia/soc/t18x/kernel-dts/tegra186-soc/tegra186-soc-spi.dtsi | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+diff --git a/nvidia/soc/t18x/kernel-dts/tegra186-soc/tegra186-soc-spi.dtsi b/nvidia/soc/t18x/kernel-dts/tegra186-soc/tegra186-soc-spi.dtsi
+index 8be63ab..1927b5c 100644
+--- a/nvidia/soc/t18x/kernel-dts/tegra186-soc/tegra186-soc-spi.dtsi
++++ b/nvidia/soc/t18x/kernel-dts/tegra186-soc/tegra186-soc-spi.dtsi
+@@ -103,5 +103,16 @@
+ 		resets = <&tegra_car TEGRA186_RESET_SPI4>;
+ 		reset-names = "spi";
+ 		status = "disabled";
++
++ 		spi@0 {
++			compatible = "spidev";
++			reg = <0x0>;
++			spi-max-frequency = <0x1312D00>;
++			nvidia,enable-hw-based-cs;
++			nvidia,cs-setup-clk-count = <0x1e>;
++			nvidia,cs-hold-clk-count = <0x1e>;
++			nvidia,rx-clk-tap-delay = <0x1f>;
++			nvidia,tx-clk-tap-delau = <0x0>;
++		};
+ 	};
+ };
+-- 
+2.7.4
+
