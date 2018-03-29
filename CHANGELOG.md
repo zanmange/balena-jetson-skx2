@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Upgrade to l4t 28.2.0 [Theodor]
+
 # v2.12.5+rev2
 ## (2018-03-27)
 
