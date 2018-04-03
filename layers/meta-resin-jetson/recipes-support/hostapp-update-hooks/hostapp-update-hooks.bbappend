@@ -1,6 +1,6 @@
 FILESEXTRAPATHS_append := ":${THISDIR}/files"
 
-DEPENDS_${PN}_append = " tegra-binaries-prepare-native"
+DEPENDS_${PN}_append = " tegra186-flash-dry"
 
 HOSTAPP_HOOKS_append = " 99-resin-uboot 50-tx2-update"
 
