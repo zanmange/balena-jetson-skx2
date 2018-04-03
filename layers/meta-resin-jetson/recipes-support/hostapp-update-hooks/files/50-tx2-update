@@ -7,11 +7,11 @@ flash() {
         part_name=$(echo $line | cut -d ':' -f 1) 
         file_name=$(echo $line | cut -d ':' -f 2)
         
-        dd oflag=dsync if="/opt/tegra-binaries-signed/$update_dir/$file_name" of="/dev/disk/by-partlabel/$part_name"
+        dd oflag=dsync if="/opt/tegra-binaries/$update_dir/$file_name" of="/dev/disk/by-partlabel/$part_name"
     done
 }
 
-flash "/opt/tegra-binaries-signed/partition_specification.txt"
+flash "/opt/tegra-binaries/partition_specification.txt"
 
 # Allow write to boot part
 echo 0 > /sys/block/mmcblk0boot0/force_ro

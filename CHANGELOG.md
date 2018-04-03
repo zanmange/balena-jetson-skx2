@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.12.5+rev5
+## (2018-03-31)
+
+* Various bug fixes introduced by recent refactoring [Theodor]
+
 # v2.12.5+rev4
 ## (2018-03-31)
 
