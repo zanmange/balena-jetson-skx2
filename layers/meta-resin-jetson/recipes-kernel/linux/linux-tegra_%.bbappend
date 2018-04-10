@@ -6,7 +6,7 @@ SRC_URI_append = " \
     file://tegra186-tx2-cti-ASG916.dtb \
     "
 
-RESIN_CONFIGS_append = " compat spi"
+RESIN_CONFIGS_append = " compat spi gamepad"
 RESIN_CONFIGS_remove = "brcmfmac"
 
 RESIN_CONFIGS[compat] = " \
@@ -21,6 +21,14 @@ RESIN_CONFIGS[spi] = " \
 RESIN_CONFIGS_DEPS[spi] = " \
 		CONFIG_QSPI_TEGRA186=y \
 		CONFIG_SPI_TEGRA144=y \
+		"
+
+RESIN_CONFIGS[gamepad] = " \
+		CONFIG_JOYSTICK_XPAD=m \
+		"
+RESIN_CONFIGS_DEPS[gamepad] = " \
+		CONFIG_INPUT_JOYSTICK=y \
+		CONFIG_USB_ARCH_HAS_HCD=y \
 		"
 
 RESIN_CONFIGS_append_skx2 = " cdc_acm wdm"

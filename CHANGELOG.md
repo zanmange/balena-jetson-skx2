@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Include Xbox 360 gamepad driver kernel module [Laurence]
+
 # v2.12.5+rev6
 ## (2018-04-09)
 
