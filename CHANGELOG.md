@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Fix meta-tegra git history and update to current HEAD [Theodor]
 * Include Xbox 360 gamepad driver kernel module [Laurence]
 
 # v2.12.5+rev6
