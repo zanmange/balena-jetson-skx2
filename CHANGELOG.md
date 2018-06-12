@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.13.0+rev1
+## (2018-06-12)
+
+* Update the meta-resin submodule to version v2.13.0 [Theodor]
+* Fix meta-tegra git history and update to current HEAD [Theodor]
 * Include Xbox 360 gamepad driver kernel module [Laurence]
 
 # v2.12.5+rev6
