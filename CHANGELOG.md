@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Add support for the CTI Orbitty Carrier Board for Nvidia Jetson TX2 [Florin]
+
 # v2.13.0+rev1
 ## (2018-06-12)
 
