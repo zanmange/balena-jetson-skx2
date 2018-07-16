@@ -3,6 +3,7 @@ inherit kernel-resin deploy
 FILESEXTRAPATHS_append := ":${THISDIR}/${PN}"
 SRC_URI_append = " \
     file://0001-Expose-spidev-to-the-userspace.patch \
+    file://tegra186-tx2-cti-ASG001-USB3.dtb \
     file://tegra186-tx2-cti-ASG916.dtb \
     "
 
@@ -72,5 +73,6 @@ do_deploy_append() {
     install -m 0600 "${D}/boot/extlinux/extlinux.conf" "${DEPLOYDIR}"
     install -m 0600 "${D}/boot/extlinux/extlinux.conf_flasher" "${DEPLOYDIR}"
 
+    cp ${WORKDIR}/tegra186-tx2-cti-ASG001-USB3.dtb "${DEPLOYDIR}"
     cp ${WORKDIR}/tegra186-tx2-cti-ASG916.dtb "${DEPLOYDIR}"
 }
