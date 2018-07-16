@@ -22,9 +22,11 @@ SRC_URI = " \
 
 IMAGE_UBOOT ??= "u-boot-dtb"
 
+KERNEL_DEVICETREE_orbitty-tx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG001-USB3.dtb"
 KERNEL_DEVICETREE_skx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG916.dtb"
 
 DTBFILE_jetson-tx2 ?= "${@os.path.basename(d.getVar('KERNEL_DEVICETREE', True).split()[0])}"
+DTBFILE_orbitty-tx2 ?= "${@os.path.basename(d.getVar('KERNEL_DEVICETREE', True).split()[0])}"
 DTBFILE_skx2 ?= "${@os.path.basename(d.getVar('KERNEL_DEVICETREE', True).split()[0])}"
 
 LDK_DIR = "${TMPDIR}/work-shared/L4T-${SOC_FAMILY}-${PV}-${PR}/Linux_for_Tegra"
