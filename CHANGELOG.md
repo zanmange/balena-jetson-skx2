@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update the resin-yocto-scripts submodule to 59ccd8558435ff6424827fb36ccb43b14650f4d4 (on master branch) [Florin]
 * Add support for the CTI Spacely Carrier Board for Nvidia Jetson TX2 [Florin]
 * Add support for the CTI Orbitty Carrier Board for Nvidia Jetson TX2 [Florin]
 
