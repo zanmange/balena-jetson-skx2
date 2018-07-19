@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.14.0+rev1
+## (2018-07-18)
+
+* Update the meta-resin submodule to version v2.14.0 [Florin]
+* Update the resin-yocto-scripts submodule to 59ccd8558435ff6424827fb36ccb43b14650f4d4 (on master branch) [Florin]
+* Add support for the CTI Spacely Carrier Board for Nvidia Jetson TX2 [Florin]
 * Add support for the CTI Orbitty Carrier Board for Nvidia Jetson TX2 [Florin]
 
 # v2.13.0+rev1

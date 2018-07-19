@@ -2,13 +2,12 @@
 #MACHINE ?= "jetson-tx2"
 #MACHINE ?= "orbitty-tx2"
 #MACHINE ?= "skx2"
+#MACHINE ?= "spacely-tx2"
 
 # We use the overlayfs docker storage driver on the Nvidia Jetson tx2
 BALENA_STORAGE = "overlay2"
 
 # More info meta-resin/README.md
-#RESIN_CONNECTABLE ?= "1"
-#RESIN_CONNECTABLE_ENABLE_SERVICES ?= "0"
 #TARGET_REPOSITORY ?= ""
 #TARGET_TAG ?= ""
 
