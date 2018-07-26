@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Clarify shutdown flashing instruction for the CTI Orbitty TX2 carrier board [Florin]
+
 # v2.14.0+rev2
 ## (2018-07-23)
 
