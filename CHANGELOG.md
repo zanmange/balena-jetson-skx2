@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.14.3+rev2
+## (2018-09-06)
+
+* Remove kernel-image package from machine [Zubair Lutfullah Kakakhel]
+* Add versionist support [Giovanni Garufi]
+
 # v2.14.3+rev1
 ## (2018-08-14)
 
