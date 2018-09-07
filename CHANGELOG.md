@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.14.3+rev3
+## (2018-09-07)
+
+* Remove kernel-image package from rootfs [Florin Sarbu]
+
 # v2.14.3+rev2
 ## (2018-09-06)
 
