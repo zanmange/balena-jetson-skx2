@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.17.0+rev1
+## (2018-09-10)
+
+* Update meta-resin submodule to v2.17.0 [Theodor Gherzan]
+
 # v2.14.3+rev3
 ## (2018-09-07)
 
