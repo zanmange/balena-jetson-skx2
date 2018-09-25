@@ -1,0 +1,229 @@
+- version: v2.17.0+rev1
+  date: 2018-09-09T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin submodule to v2.17.0 [Theodor Gherzan]'
+- version: v2.14.3+rev3
+  date: 2018-09-06T22:00:00.000Z
+  commits:
+    - subject: 'Remove kernel-image package from rootfs [Florin Sarbu]'
+- version: v2.14.3+rev2
+  date: 2018-09-05T22:00:00.000Z
+  commits:
+    - subject: 'Remove kernel-image package from machine [Zubair Lutfullah Kakakhel]'
+    - subject: 'Add versionist support [Giovanni Garufi]'
+- version: v2.14.3+rev1
+  date: 2018-08-13T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.14.3 [Florin]'
+- version: v2.14.1+rev1
+  date: 2018-08-09T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.14.1 [Florin]'
+- version: v2.14.0+rev3
+  date: 2018-07-25T22:00:00.000Z
+  commits:
+    - subject: >-
+        Clarify shutdown flashing instruction for the CTI Orbitty TX2 carrier
+        board [Florin]
+- version: v2.14.0+rev2
+  date: 2018-07-22T22:00:00.000Z
+  commits:
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        8312741e13604a9d166370349061876afb22c0fa (on master branch) [Florin]
+- version: v2.14.0+rev1
+  date: 2018-07-17T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.14.0 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        59ccd8558435ff6424827fb36ccb43b14650f4d4 (on master branch) [Florin]
+    - subject: >-
+        Add support for the CTI Spacely Carrier Board for Nvidia Jetson TX2
+        [Florin]
+    - subject: >-
+        Add support for the CTI Orbitty Carrier Board for Nvidia Jetson TX2
+        [Florin]
+- version: v2.13.0+rev1
+  date: 2018-06-11T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.13.0 [Theodor]'
+    - subject: 'Fix meta-tegra git history and update to current HEAD [Theodor]'
+    - subject: 'Include Xbox 360 gamepad driver kernel module [Laurence]'
+- version: v2.12.5+rev6
+  date: 2018-04-08T22:00:00.000Z
+  commits:
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        6d6f7b29348323569f47c8acbf5963ff64d17647 (on master branch) [Florin]
+    - subject: 'Fix boot partition number in the coffee file for skx2 [Florin]'
+- version: v2.12.5+rev5
+  date: 2018-03-30T22:00:00.000Z
+  commits:
+    - subject: 'Various bug fixes introduced by recent refactoring [Theodor]'
+- version: v2.12.5+rev4
+  date: 2018-03-30T22:00:00.000Z
+  commits:
+    - subject: 'Fix boot partition number [Theodor]'
+- version: v2.12.5+rev3
+  date: 2018-03-29T22:00:00.000Z
+  commits:
+    - subject: 'Default root partition to the 12 [Theodor]'
+    - subject: 'Default enable of spi dev in userspace [Theodor]'
+    - subject: 'Upgrade to l4t 28.2.0 [Theodor]'
+- version: v2.12.5+rev2
+  date: 2018-03-26T22:00:00.000Z
+  commits:
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        9cecb1ca4d9d4713dd337148b7d04a17afdba772 (on master branch) [Florin]
+- version: v2.12.5+rev1
+  date: 2018-03-21T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.5 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        51b8849e2a02d0d4e729bff24909d9746e0bf4c3 (on master branch) [Florin]
+- version: v2.12.3+rev1
+  date: 2018-03-14T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.3 [Florin]'
+    - subject: 'Move to rocko [Theodor]'
+- version: v2.12.1+rev1
+  date: 2018-03-11T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.1 [Andrei]'
+- version: v2.12.0+rev1
+  date: 2018-03-07T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.0 [Theodor]'
+- version: v2.11.2+rev1
+  date: 2018-03-07T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.11.2 [Andrei]'
+- version: v2.11.1+rev1
+  date: 2018-03-07T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.11.1 [Andrei]'
+- version: v2.11.0+rev1
+  date: 2018-03-07T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.11.0 [Theodor]'
+- version: v2.10.1+rev1
+  date: 2018-02-28T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.10.1 [Florin]'
+    - subject: 'Remove obsolete submodule oe-meta-go [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        dc9dfe466e48d934e55fb20a05156886873b1ab1 (on master branch) [Florin]
+    - subject: 'Patch kernel to support Intel RealSense cameras [Theodor]'
+- version: v2.9.7+rev4
+  date: 2018-02-20T23:00:00.000Z
+  commits:
+    - subject: 'Rework the way we generate tegra binaries [Theodor]'
+    - subject: >-
+        Generate boot0 image so we can correctly configure the partition table
+        [Theodor]
+- version: v2.9.7+rev3
+  date: 2018-02-12T23:00:00.000Z
+  commits:
+    - subject: 'Fix binary magic [Theodor]'
+- version: v2.9.7+rev2
+  date: 2018-01-28T23:00:00.000Z
+  commits:
+    - subject: 'Fix hostapps-update [Theodor]'
+- version: v2.9.7+rev1
+  date: 2018-01-25T23:00:00.000Z
+  commits:
+    - subject: 'Update rein-yocto-scripts to latest [Theodor]'
+    - subject: 'Update meta-resin submodule to v2.9.6 [Theodor]'
+- version: v2.8.1+rev2
+  date: 2017-12-21T00:00:00.000Z
+  commits:
+    - subject: 'Change display name Nvidia Jetson TX2 SK -> SKX2 [Theodor]'
+    - subject: 'Update meta-rust to pyro [Andrei]'
+- version: v2.8.1+rev1
+  date: 2017-11-30T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to include kernel header fix [Theodor]'
+- version: v2.7.4+rev2
+  date: 2017-10-27T00:00:00.000Z
+  commits:
+    - subject: 'Rename skx2 to Nvidia Jetson TX2 SK [Theodor]'
+- version: v2.7.4+rev1
+  date: 2017-10-18T00:00:00.000Z
+  commits:
+    - subject: 'Include cdc_amc and cdc_wdm module for the skx2 [Theodor]'
+    - subject: 'Various bug fixes [Theodor]'
+- version: v2.7.2+rev10
+  date: 2017-10-18T00:00:00.000Z
+  commits:
+    - subject: 'Fix root kernel parameter for resin-image-flasher [Theodor]'
+    - subject: 'Update meta-openembedded to latest pyro branch [Will]'
+    - subject: 'Update poky to latest pyro branch [Will]'
+- version: v2.7.2+rev9
+  date: 2017-10-17T00:00:00.000Z
+  commits:
+    - subject: 'Rename device-type to SKX2 [Theodor]'
+- version: v2.7.2+rev8
+  date: 2017-10-17T00:00:00.000Z
+  commits:
+    - subject: 'Fix name clash between device types [Theodor]'
+- version: v2.7.2+rev7
+  date: 2017-10-16T00:00:00.000Z
+  commits:
+    - subject: 'Add an icon to the SKX2 [Theodor]'
+- version: v2.7.2+rev6
+  date: 2017-10-16T00:00:00.000Z
+  commits:
+    - subject: 'Release SKX2 [Theodor]'
+- version: v2.7.2+rev5
+  date: 2017-10-12T00:00:00.000Z
+  commits:
+    - subject: 'Update resin-yocto-scripts to latest [Theodor]'
+- version: v2.7.2+rev4
+  date: 2017-10-12T00:00:00.000Z
+  commits:
+    - subject: 'Update resin-yocto-scripts to latest [Theodor]'
+- version: v2.7.2+rev3
+  date: 2017-10-12T00:00:00.000Z
+  commits:
+    - subject: 'Support new device type: SKX2 [Theodor]'
+    - subject: 'Integrate with resin u-boot [Theodor]'
+- version: v2.7.2+rev2
+  date: 2017-10-04T22:00:00.000Z
+  commits:
+    - subject: 'Fix boot partition index [Theodor]'
+- version: v2.7.2+rev1
+  date: 2017-10-04T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin submodule to v2.7.2 [Andrei]'
+    - subject: 'Re-work Nvidia Jetson TX2 to update all internal partitions [Theodor]'
+    - subject: 'Include meta-rust layer [Will]'
+    - subject: 'Add meta-rust layer [Will]'
+- version: v2.3.0+rev1
+  date: 2017-08-16T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.3.0 [Florin]'
+- version: v2.2.0+rev1
+  date: 2017-07-27T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.2.0 [Florin]'
+    - subject: 'Update the resin-yocto-scripts submodule to HEAD of master [Florin]'
+- version: v2.1.0+rev2
+  date: 2017-07-23T22:00:00.000Z
+  commits:
+    - subject: 'Switch from aufs to overlayfs for the docker storage driver [Florin]'
+- version: v2.1.0+rev1
+  date: 2017-07-20T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.1.0 [Florin]'
+    - subject: 'Update the resin-yocto-scripts submodule to HEAD of master [Florin]'
+    - subject: 'Fix wireless chip  [Theodor]'
+- version: v2.0.8+rev1
+  date: 2017-07-05T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.0.8 [Florin]'
+    - subject: 'Update the resin-yocto-scripts submodule to HEAD of master [Florin]'
+    - subject: 'Provide initial support for the Nvidia Jetson TX2 [Theodor]'
