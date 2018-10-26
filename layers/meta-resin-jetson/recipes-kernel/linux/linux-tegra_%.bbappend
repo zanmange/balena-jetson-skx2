@@ -4,6 +4,7 @@ FILESEXTRAPATHS_append := ":${THISDIR}/${PN}"
 SRC_URI_append = " \
     file://0001-Expose-spidev-to-the-userspace.patch \
     file://tegra186-tx2-cti-ASG001-USB3.dtb \
+    file://tegra186-quill-p3310-1000-c03-00-base.dtb \
     file://tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb \
     file://tegra186-tx2-cti-ASG916.dtb \
     "
@@ -42,8 +43,8 @@ RESIN_CONFIGS[wdm] = "CONFIG_USB_WDM=m"
 
 TEGRA_INITRAMFS_INITRD = "0"
 
-KERNEL_ROOTSPEC = "\${resin_kernel_root} ro rootwait" 
-KERNEL_ROOTSPEC_FLASHER = "root=/dev/mmcblk1p2 ro rootwait" 
+KERNEL_ROOTSPEC = "\${resin_kernel_root} ro rootwait"
+KERNEL_ROOTSPEC_FLASHER = "root=/dev/mmcblk1p2 ro rootwait"
 
 generate_extlinux_conf() {
     install -d ${D}/${KERNEL_IMAGEDEST}/extlinux
@@ -75,6 +76,7 @@ do_deploy_append() {
     install -m 0600 "${D}/boot/extlinux/extlinux.conf_flasher" "${DEPLOYDIR}"
 
     cp ${WORKDIR}/tegra186-tx2-cti-ASG001-USB3.dtb "${DEPLOYDIR}"
+    cp ${WORKDIR}/tegra186-quill-p3310-1000-c03-00-base.dtb "${DEPLOYDIR}"
     cp ${WORKDIR}/tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb "${DEPLOYDIR}"
     cp ${WORKDIR}/tegra186-tx2-cti-ASG916.dtb "${DEPLOYDIR}"
 }
