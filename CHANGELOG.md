@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.24.0+rev3
+## (2018-11-02)
+
+* Update contribution commit guidelines [nazrhom]
+
 # v2.24.0+rev2
 ## (2018-10-25)
 

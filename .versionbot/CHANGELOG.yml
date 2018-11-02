@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update contribution commit guidelines
+      hash: a3656b868c37e2fd4476235e84dae15660c7e5d5
+      body: ''
+      footer:
+        Changelog-Entry: Update contribution commit guidelines
+        changelog-entry: Update contribution commit guidelines
+        Signed-off-by: Giovanni Garufi <giovanni@resin.io>
+        signed-off-by: Giovanni Garufi <giovanni@resin.io>
+      author: nazrhom
+  version: 2.24.0+rev3
+  date: 2018-11-02T10:25:18.579Z
+- commits:
     - subject: Workaround for usb_modeswitch crash on 64 bits platforms
       hash: 3149fad8073a7c340d730f82fd140c8ab12b8fc2
       body: |
