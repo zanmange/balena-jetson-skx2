@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.24.0+rev4:
+## (2018-11-05)
+
+* Add support for Aetina N510 carrier board [Raphael Dürscheid]
+
 # v2.24.0+rev3
 ## (2018-11-02)
 

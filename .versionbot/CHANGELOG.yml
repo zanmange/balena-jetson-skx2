@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add support for Aetina N510 carrier board
+      hash: e35a9c52a5d8e016a17c52737ef416db000f763a
+      body: |
+        Create n509-tx2.conf and n510-tx2.coffee files, add .dtb file provided
+        by Aetina and set the ODMDATA value in the n510-tx2.conf.
+        Verified to build, deploy and support USB3 as expected.
+      footer:
+        Changelog-Entry: Add support for Aetina N510 carrier board
+        changelog-entry: Add support for Aetina N510 carrier board
+      author: Raphael Dürscheid
+  version: 2.24.0+rev4
+  date: 2018-11-05T12:57:24.569Z
+- commits:
     - subject: Update contribution commit guidelines
       hash: a3656b868c37e2fd4476235e84dae15660c7e5d5
       body: ''
