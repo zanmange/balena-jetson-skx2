@@ -5,8 +5,8 @@ LIC_FILES_CHKSUM = "file://${RESIN_COREBASE}/COPYING.Apache-2.0;md5=89aea4e17d99
 
 DEPENDS = " \
     coreutils-native \
-    virtual/bootloader \ 
-    virtual/kernel \ 
+    virtual/bootloader \
+    virtual/kernel \
     tegra-binaries \
     tegra-bootfiles \
     tegra186-flashtools-native \
@@ -23,6 +23,7 @@ SRC_URI = " \
 IMAGE_UBOOT ??= "u-boot-dtb"
 
 KERNEL_DEVICETREE_orbitty-tx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG001-USB3.dtb"
+KERNEL_DEVICETREE_n510-tx2 = "${DEPLOY_DIR_IMAGE}/tegra186-quill-p3310-1000-c03-00-base.dtb"
 KERNEL_DEVICETREE_skx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG916.dtb"
 KERNEL_DEVICETREE_spacely-tx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb"
 
@@ -116,7 +117,7 @@ create_boot0_img() {
     # SPE
     cat ${1}/spe_sigheader.bin.encrypt >> ${1}/${boot0}
     dd if=/dev/zero bs=16 count=3071 >> ${1}/${boot0}
-    
+
     # MB2
     cat ${1}/nvtboot_sigheader.bin.encrypt >> ${1}/${boot0}
     dd if=/dev/zero bs=16 count=10074 >> ${1}/${boot0}
