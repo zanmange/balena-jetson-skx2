@@ -1,4 +1,30 @@
 - commits:
+    - subject: Install n510-tx2 dtb only for this machine
+      hash: 752076bfe8ee1a2cda6e9407fb36b95105e064af
+      body: |
+        The device tree for the n510-tx2 machine seems to be loaded
+        by the first stage bootloader program(before u-boot) on the
+        jetson-tx2 instead of the jetson-tx2 device tree.
+        This patch installs the n510-tx2 device tree only when the machine
+        is built.
+      footer:
+        Changelog-entry: Install n510-tx2 dtb only for this machine
+        changelog-entry: Install n510-tx2 dtb only for this machine
+        Signed-off-by: Sebastian Panceac <sebastian@balena.io>
+        signed-off-by: Sebastian Panceac <sebastian@balena.io>
+      author: Sebastian Panceac
+    - subject: Clarify contribution commit guidelines
+      hash: c2c7054443ba722f5e6509e238cb5eb4f4dd4539
+      body: ''
+      footer:
+        Changelog-entry: Clarify contribution commit guidelines
+        changelog-entry: Clarify contribution commit guidelines
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.26.0+rev2
+  date: 2018-11-26T11:15:04.019Z
+- commits:
     - subject: Update the meta-resin submodule from v2.25.0 to v2.26.0
       hash: 86882d9a5fe2ba723529d17694f9469aad932e1e
       body: |
