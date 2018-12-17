@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.27.0+rev2
+## (2018-12-13)
+
+* Include extra NVidia utils in the rootfs [Florin Sarbu]
+
 # v2.27.0+rev1
 ## (2018-11-26)
 

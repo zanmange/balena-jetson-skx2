@@ -1,4 +1,16 @@
 - commits:
+    - subject: Include extra NVidia utils in the rootfs
+      hash: 86d498dfe19822ea77e3dd204d859ac3bcc99776
+      body: ''
+      footer:
+        Changelog-entry: Include extra NVidia utils in the rootfs
+        changelog-entry: Include extra NVidia utils in the rootfs
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.27.0+rev2
+  date: 2018-12-13T07:01:53.225Z
+- commits:
     - subject: Update the meta-resin submodule from v2.26.0 to v2.27.0
       hash: 6a58cf33c97cca5c6d37d8874b100d459cf2c50a
       body: |
