@@ -14,9 +14,9 @@
 	path = layers/meta-tegra
 	url = https://github.com/madisongh/meta-tegra.git
 	branch = morty-l4t-r27.1
-[submodule "resin-yocto-scripts"]
-	path = resin-yocto-scripts
-	url = https://github.com/resin-os/resin-yocto-scripts.git
+[submodule "balena-yocto-scripts"]
+	path = balena-yocto-scripts
+	url = https://github.com/balena-os/balena-yocto-scripts.git
 [submodule "layers/meta-rust"]
 	path = layers/meta-rust
 	url = https://github.com/meta-rust/meta-rust.git
