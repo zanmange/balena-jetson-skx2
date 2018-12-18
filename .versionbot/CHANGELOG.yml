@@ -1,4 +1,16 @@
 - commits:
+    - subject: Switch from resin-yocto-scripts to balena-yocto-scripts
+      hash: c81b4db8ac0442773ef16b7bfd2f9cc4554024be
+      body: ''
+      footer:
+        Changelog-entry: Switch from resin-yocto-scripts to balena-yocto-scripts
+        changelog-entry: Switch from resin-yocto-scripts to balena-yocto-scripts
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.27.0+rev3
+  date: 2018-12-17T20:47:13.479Z
+- commits:
     - subject: Include extra NVidia utils in the rootfs
       hash: 86d498dfe19822ea77e3dd204d859ac3bcc99776
       body: ''
