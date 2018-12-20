@@ -7,6 +7,7 @@ SRC_URI_append = " \
   file://realsense_metadata_linux-yocto_4.4.patch \
   file://realsense_powerlinefrequency_control_fix_linux-yocto_4.4.patch \
   file://realsense_camera_formats_linux-yocto_4.4.patch \
+  file://realsense_format_desc_4.4.patch \
   "
 
 RESIN_CONFIGS_append = " uvc"                                                                                                                                                  
