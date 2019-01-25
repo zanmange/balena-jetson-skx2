@@ -1,4 +1,16 @@
 - commits:
+    - subject: Upgrade TX2 from BETA to released status
+      hash: 7a102f3b18daa3ee887e9d9e62fcb78609d97f76
+      body: ''
+      footer:
+        Changelog-entry: Upgrade TX2 from BETA to released status
+        changelog-entry: Upgrade TX2 from BETA to released status
+        Signed-off-by: Shaun Mulligan <shaun@balena.io>
+        signed-off-by: Shaun Mulligan <shaun@balena.io>
+      author: Shaun Mulligan
+  version: 2.29.0+rev3
+  date: 2019-01-25T10:07:40.584Z
+- commits:
     - subject: Add patch with pixelformat descriptions
       hash: c776d924d9b1c906a345522185b5729cf8f13886
       body: >

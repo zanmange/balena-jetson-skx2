@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.29.0+rev3
+## (2019-01-25)
+
+* Upgrade TX2 from BETA to released status [Shaun Mulligan]
+
 # v2.29.0+rev2
 ## (2018-12-23)
 
