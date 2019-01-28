@@ -1,4 +1,27 @@
 - commits:
+    - subject: Update the meta-resin submodule from v2.29.0 to v2.29.2
+      hash: 4c212beb81083738a9b5105e4abeeddadef6a8f8
+      body: |
+        Update meta-resin from 2.29.0 to 2.29.2
+      footer:
+        Changelog-entry: Update the meta-resin submodule from v2.29.0 to v2.29.2
+        changelog-entry: Update the meta-resin submodule from v2.29.0 to v2.29.2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Update the balena-yocto-scripts submodule to v1.0.2
+      hash: 31cea4e24befdffb1ab0b02f69a2332f1c6d6ef4
+      body: ''
+      footer:
+        Changelog-entry: Update the balena-yocto-scripts submodule to v1.0.2
+        changelog-entry: Update the balena-yocto-scripts submodule to v1.0.2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.29.2+rev1
+  date: 2019-01-28T10:21:40.447Z
+- commits:
     - subject: Upgrade TX2 from BETA to released status
       hash: 7a102f3b18daa3ee887e9d9e62fcb78609d97f76
       body: ''
