@@ -1,6 +1,7 @@
 deviceTypesCommon = require '@resin.io/device-types/common'
 { networkOptions, commonImg, instructions } = deviceTypesCommon
 
+BOARD_POWEROFF = 'Remove and re-connect power to the board.'
 BOARD_POWERON = 'Press and hold for 1 second the POWER push button.'
 
 postProvisioningInstructions = [
@@ -24,6 +25,7 @@ module.exports =
 		instructions.ETCHER_SD
 		instructions.EJECT_SD
 		instructions.FLASHER_WARNING
+		BOARD_POWEROFF
 		BOARD_POWERON
 	].concat(postProvisioningInstructions)
 
