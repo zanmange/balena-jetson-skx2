@@ -7,7 +7,7 @@
 	url = https://github.com/openembedded/meta-openembedded.git
 	branch = morty
 [submodule "layers/meta-resin"]
-	path = layers/meta-resin
+	path = layers/meta-balena
 	url = https://github.com/resin-os/meta-resin.git
 	branch = v2.0.3
 [submodule "layers/meta-tegra"]
