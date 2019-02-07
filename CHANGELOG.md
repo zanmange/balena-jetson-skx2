@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.29.2+rev2
+## (2019-02-05)
+
+* Enable CONFIG_CMD_SETEXPR for u-boot [Alexandru Costache]
+
 # v2.29.2+rev1
 ## (2019-01-28)
 

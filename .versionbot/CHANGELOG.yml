@@ -1,4 +1,16 @@
 - commits:
+    - subject: Enable CONFIG_CMD_SETEXPR for u-boot
+      hash: da1b7428288f4cd532cc07affff480013c0c546c
+      body: ''
+      footer:
+        Changelog-entry: Enable CONFIG_CMD_SETEXPR for u-boot
+        changelog-entry: Enable CONFIG_CMD_SETEXPR for u-boot
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.29.2+rev2
+  date: 2019-02-05T13:02:22.746Z
+- commits:
     - subject: Update the meta-resin submodule from v2.29.0 to v2.29.2
       hash: 4c212beb81083738a9b5105e4abeeddadef6a8f8
       body: |
