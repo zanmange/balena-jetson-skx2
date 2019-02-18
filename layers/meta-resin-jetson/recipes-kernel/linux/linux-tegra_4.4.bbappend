@@ -10,15 +10,15 @@ SRC_URI_append = " \
   file://realsense_format_desc_4.4.patch \
   "
 
-RESIN_CONFIGS_append = " uvc"                                                                                                                                                  
-                                                                                                                                                                                  
-RESIN_CONFIGS[uvc] = " \                                                                                                                                                       
+RESIN_CONFIGS_append = " uvc"
+
+RESIN_CONFIGS[uvc] = " \
 		CONFIG_USB_VIDEO_CLASS=m \
 		CONFIG_USB_VIDEO_CLASS_INPUT_EDEV=y \
-		" 
+		"
 
 RESIN_CONFIGS_DEPS[uvc] = " \
-    CONFIG_MEDIA_CAMERA_SUPPORT=y \
+		CONFIG_MEDIA_CAMERA_SUPPORT=y \
 		CONFIG_VIDEO_V4L2_SUBDEV_API=y \
 		CONFIG_VIDEO_V4L2=m \
 		CONFIG_VIDEOBUF2_CORE=m \
@@ -28,4 +28,10 @@ RESIN_CONFIGS_DEPS[uvc] = " \
 		CONFIG_USB_GSPCA=m \
 		CONFIG_SND_USB=y \
 		CONFIG_SND_USB_AUDIO=m \
-    "
+		"
+
+RESIN_CONFIGS_append = " egalax"
+
+RESIN_CONFIGS[egalax] = " \
+		CONFIG_TOUCHSCREEN_EGALAX=m \
+		"
