@@ -1,4 +1,18 @@
 - commits:
+    - subject: Added touchscreen egalax kernel module
+      hash: 18e75f369d0817fdcf3bcaa682b0179614b0d835
+      body: |
+        This module is needeed to have the eGalaxTouch EXC3000
+        touchscreen display work with our Balena image
+      footer:
+        Changelog-entry: Added touchscreen egalax kernel module
+        changelog-entry: Added touchscreen egalax kernel module
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+  version: 2.29.2+rev3
+  date: 2019-02-18T11:03:50.224Z
+- commits:
     - subject: Enable CONFIG_CMD_SETEXPR for u-boot
       hash: da1b7428288f4cd532cc07affff480013c0c546c
       body: ''
