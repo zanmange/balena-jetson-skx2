@@ -3,12 +3,13 @@ inherit kernel-resin
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 SRC_URI_append = " \
-  file://realsense_hid_linux-yocto_4.4.patch \
-  file://realsense_metadata_linux-yocto_4.4.patch \
-  file://realsense_powerlinefrequency_control_fix_linux-yocto_4.4.patch \
-  file://realsense_camera_formats_linux-yocto_4.4.patch \
-  file://realsense_format_desc_4.4.patch \
-  "
+	file://realsense_hid_linux-yocto_4.4.patch \
+	file://realsense_metadata_linux-yocto_4.4.patch \
+	file://realsense_powerlinefrequency_control_fix_linux-yocto_4.4.patch \
+	file://realsense_camera_formats_linux-yocto_4.4.patch \
+	file://realsense_format_desc_4.4.patch \
+	file://0002-qmi_wwan-Update-from-4.14-kernel.patch \
+	"
 
 RESIN_CONFIGS_append = " uvc"
 
@@ -34,4 +35,9 @@ RESIN_CONFIGS_append = " egalax"
 
 RESIN_CONFIGS[egalax] = " \
 		CONFIG_TOUCHSCREEN_EGALAX=m \
+		"
+
+RESIN_CONFIGS_append = " serial"
+RESIN_CONFIGS[serial] = " \
+		CONFIG_USB_SERIAL_GENERIC=y \
 		"
