@@ -1,4 +1,16 @@
 - commits:
+    - subject: Mark n510-tx2 as community
+      hash: 7b6716baec36d2c0ee233ad039db64040d1e2fea
+      body: ''
+      footer:
+        Changelog-entry: Mark n510-tx2 as community
+        changelog-entry: Mark n510-tx2 as community
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.31.0+rev2
+  date: 2019-03-11T15:30:41.243Z
+- commits:
     - subject: Update the meta-resin submodule from v2.29.2 to v2.31.0
       hash: 51e1df73fce066fce1956dee311ec1a4ae9b0f50
       body: |

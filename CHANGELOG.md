@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.31.0+rev2
+## (2019-03-11)
+
+* Mark n510-tx2 as community [Florin Sarbu]
+
 # v2.31.0+rev1
 ## (2019-03-11)
 
