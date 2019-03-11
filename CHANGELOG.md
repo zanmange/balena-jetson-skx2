@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.29.2+rev4
+## (2019-03-11)
+
+* GSM Modems updates from kernel 4.14 [Vicentiu Galanopulo]
+
 # v2.29.2+rev3
 ## (2019-02-18)
 
