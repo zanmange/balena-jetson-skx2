@@ -1,4 +1,19 @@
 - commits:
+    - subject: GSM Modems updates from kernel 4.14
+      hash: 2987f6c880ebd5aad561fadfd567d49a38d08318
+      body: |
+        There was no Internet connectivity for either of the supported
+        GSM PCIe modems. This update allows internet traffic and boards
+        show up in the dashboard after provisioning.
+      footer:
+        Changelog-entry: GSM Modems updates from kernel 4.14
+        changelog-entry: GSM Modems updates from kernel 4.14
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+  version: 2.29.2+rev4
+  date: 2019-03-11T11:48:15.218Z
+- commits:
     - subject: Added touchscreen egalax kernel module
       hash: 18e75f369d0817fdcf3bcaa682b0179614b0d835
       body: |
