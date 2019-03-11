@@ -16,6 +16,7 @@ module.exports =
 	name: 'Aetina N510 TX2'
 	arch: 'aarch64'
 	state: 'experimental'
+	community: true
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
