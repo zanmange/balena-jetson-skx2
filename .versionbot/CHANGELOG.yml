@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update meta-resin from v2.31.0 to v2.31.1
+      hash: 64021f049601fda937b25424306f1940aab29c4f
+      body: |
+        .
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update meta-resin from v2.31.0 to v2.31.1
+        changelog-entry: Update meta-resin from v2.31.0 to v2.31.1
+        Signed-off-by: Pablo Carranza Velez <pablocarranza@gmail.com>
+        signed-off-by: Pablo Carranza Velez <pablocarranza@gmail.com>
+      author: Pablo Carranza Velez
+  version: 2.31.1+rev1
+  date: 2019-03-18T22:11:04.872Z
+- commits:
     - subject: Mark n510-tx2 as community
       hash: 7b6716baec36d2c0ee233ad039db64040d1e2fea
       body: ''
