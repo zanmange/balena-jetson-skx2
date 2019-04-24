@@ -1,6 +1,6 @@
 [submodule "layers/poky"]
 	path = layers/poky
-	url = https://git.yoctoproject.org/git/poky
+	url = https://github.com/balena-os/poky
 	branch = morty
 [submodule "layers/meta-openembedded"]
 	path = layers/meta-openembedded
