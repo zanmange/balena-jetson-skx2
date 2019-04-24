@@ -1,6 +1,14 @@
 Change log
 -----------
 
+# v2.31.5+rev2
+## (2019-04-24)
+
+* Update the balena-yocto-scripts submodule to v1.0.5 [Florin Sarbu]
+* Update repo.yml to be able to trigger VersionBot with `meta-balena` [Florin Sarbu]
+* Rename meta-resin to meta-balena in repository [Florin Sarbu]
+* Change the poky submodule to our github mirror [Florin Sarbu]
+
 # v2.31.5+rev1
 ## (2019-03-22)
 

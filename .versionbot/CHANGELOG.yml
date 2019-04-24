@@ -1,4 +1,46 @@
 - commits:
+    - subject: Update the balena-yocto-scripts submodule to v1.0.5
+      hash: 406dab8308b25cc5df26e491d56ad940fd1e965d
+      body: ''
+      footer:
+        Changelog-entry: Update the balena-yocto-scripts submodule to v1.0.5
+        changelog-entry: Update the balena-yocto-scripts submodule to v1.0.5
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Update repo.yml to be able to trigger VersionBot with `meta-balena`
+      hash: a19cbb5f8182d1bd8a3e54d9ef45bd6cfce66b68
+      body: ''
+      footer:
+        Changelog-entry: Update repo.yml to be able to trigger VersionBot with `meta-balena`
+        changelog-entry: Update repo.yml to be able to trigger VersionBot with `meta-balena`
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Rename meta-resin to meta-balena in repository
+      hash: bfb7197757fce0cc857cbc345a6f8f6face445ff
+      body: ''
+      footer:
+        Changelog-entry: Rename meta-resin to meta-balena in repository
+        changelog-entry: Rename meta-resin to meta-balena in repository
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Change the poky submodule to our github mirror
+      hash: 3a585ff14ff6d9d0c6fd7a883a5448f1ff41d19a
+      body: |
+        We do this change because we noticed frequent timeouts
+        in different parts of our build infrastructure when pulling
+        the poky repository from https://git.yoctoproject.org/git/poky
+      footer:
+        Changelog-entry: Change the poky submodule to our github mirror
+        changelog-entry: Change the poky submodule to our github mirror
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.31.5+rev2
+  date: 2019-04-24T13:02:57.178Z
+- commits:
     - subject: Update the meta-resin submodule from v2.31.2 to v2.31.5
       hash: f94c8a4927fafc87ed46cb9c79adc56ad75a5f31
       body: |
