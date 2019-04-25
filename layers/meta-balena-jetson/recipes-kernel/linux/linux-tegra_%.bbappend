@@ -3,13 +3,14 @@ inherit kernel-resin deploy
 FILESEXTRAPATHS_append := ":${THISDIR}/${PN}"
 SRC_URI_append = " \
     file://0001-Expose-spidev-to-the-userspace.patch \
+    file://0002-mttcan-ivc-enable.patch \
     file://tegra186-tx2-cti-ASG001-USB3.dtb \
     file://tegra186-quill-p3310-1000-c03-00-base.dtb \
     file://tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb \
     file://tegra186-tx2-cti-ASG916.dtb \
     "
 
-RESIN_CONFIGS_append = " compat spi gamepad"
+RESIN_CONFIGS_append = " compat spi gamepad can"
 RESIN_CONFIGS_remove = "brcmfmac"
 
 RESIN_CONFIGS[compat] = " \
@@ -40,6 +41,14 @@ RESIN_CONFIGS_DEPS[cdc_acm] = "CONFIG_TTY=y"
 RESIN_CONFIGS[cdc_acm] = "CONFIG_USB_ACM=m"
 
 RESIN_CONFIGS[wdm] = "CONFIG_USB_WDM=m"
+
+RESIN_CONFIGS[can] = " \
+		CONFIG_CAN=m \
+		CONFIG_CAN_RAW=m \
+		CONFIG_CAN_DEV=m \
+		CONFIG_MTTCAN=m \
+		CONFIG_MTTCAN_IVC=m \
+"
 
 TEGRA_INITRAMFS_INITRD = "0"
 
