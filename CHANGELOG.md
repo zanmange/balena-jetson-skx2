@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.31.5+rev3
+## (2019-04-29)
+
+* CAN bus enablement [Vicentiu Galanopulo]
+
 # v2.31.5+rev2
 ## (2019-04-24)
 

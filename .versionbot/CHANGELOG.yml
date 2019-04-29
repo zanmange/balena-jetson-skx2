@@ -1,4 +1,19 @@
 - commits:
+    - subject: CAN bus enablement
+      hash: f6e18f32631e6ef51f0f0c0a4e524e880c85a1e0
+      body: |
+        According to the nVIDIA-https://docs.nvidia.com/drive/nvvib_docs
+        development guide for the CAN bus, the CAN driver must be enabled
+        and the specific CAN kernel config options need to be specified.
+      footer:
+        Changelog-entry: CAN bus enablement
+        changelog-entry: CAN bus enablement
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+  version: 2.31.5+rev3
+  date: 2019-04-29T10:11:06.614Z
+- commits:
     - subject: Update the balena-yocto-scripts submodule to v1.0.5
       hash: 406dab8308b25cc5df26e491d56ad940fd1e965d
       body: ''
