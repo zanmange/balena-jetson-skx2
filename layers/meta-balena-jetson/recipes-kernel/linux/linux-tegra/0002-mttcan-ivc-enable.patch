@@ -1,0 +1,34 @@
+From e60a72a72f68f516413d7c2e9c690328777d90fe Mon Sep 17 00:00:00 2001
+From: Vicentiu Galanopulo <vicentiu@balena.io>
+Date: Tue, 23 Apr 2019 17:06:08 +0200
+Subject: [PATCH] Enable mttcan-ivc for the CAN bus
+
+Upstream-Status: Inappropriate [configuration]
+Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+---
+ nvidia/soc/t18x/kernel-dts/tegra186-soc/tegra186-aon.dtsi | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/nvidia/soc/t18x/kernel-dts/tegra186-soc/tegra186-aon.dtsi b/nvidia/soc/t18x/kernel-dts/tegra186-soc/tegra186-aon.dtsi
+index 7ee4278..7614ee5 100644
+--- a/nvidia/soc/t18x/kernel-dts/tegra186-soc/tegra186-aon.dtsi
++++ b/nvidia/soc/t18x/kernel-dts/tegra186-soc/tegra186-aon.dtsi
+@@ -87,13 +87,13 @@
+ 	mttcan0-ivc {
+ 		compatible = "bosch,mttcan-ivc";
+ 		mboxes = <&aon 3>;
+-		status = "disabled";
++		status = "okay";
+ 	};
+ 
+ 	mttcan1-ivc {
+ 		compatible = "bosch,mttcan-ivc";
+ 		mboxes = <&aon 4>;
+-		status = "disabled";
++		status = "okay";
+ 	};
+ };
+ 
+-- 
+2.7.4
+
