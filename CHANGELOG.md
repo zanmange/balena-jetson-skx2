@@ -1,6 +1,14 @@
 Change log
 -----------
 
+# v2.31.5+rev4
+## (2019-05-03)
+
+* Add CONFIG_VIDEO_TEGRA_VI_TPG as built-in [Vicentiu Galanopulo]
+* Added custom srd3-tx2 dtb to tegra186-flash-dry [Vicentiu Galanopulo]
+* Added ov10640 dtb for D3 [Vicentiu Galanopulo]
+* Added srd3-tx2.conf machine [Vicentiu Galanopulo]
+
 # v2.31.5+rev3
 ## (2019-04-29)
 

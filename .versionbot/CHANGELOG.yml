@@ -1,4 +1,50 @@
 - commits:
+    - subject: Add CONFIG_VIDEO_TEGRA_VI_TPG as built-in
+      hash: c976f50dacbba90fd15928c4035d4b8d9934952c
+      body: |
+        CONFIG_VIDEO_TEGRA_VI_TPG is need to have the
+        video0..5 devices created. One of these devices
+        will be used for video capture
+      footer:
+        Changelog-entry: Add CONFIG_VIDEO_TEGRA_VI_TPG as built-in
+        changelog-entry: Add CONFIG_VIDEO_TEGRA_VI_TPG as built-in
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+    - subject: Added custom srd3-tx2 dtb to tegra186-flash-dry
+      hash: 3f3b9da07a0ccbc0ae983546d04e43f1dfb6c125
+      body: |
+        The custom dtb for the srd3-tx2 needs to be added in this recipe
+        in order to be properly signed and flashed
+      footer:
+        Changelog-entry: Added custom srd3-tx2 dtb to tegra186-flash-dry
+        changelog-entry: Added custom srd3-tx2 dtb to tegra186-flash-dry
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+    - subject: Added ov10640 dtb for D3
+      hash: 6872f7f2ff19b435b352927193d041912101e8d8
+      body: |
+        The custom device tree blob contains the nodes enabled
+        for the video camera
+      footer:
+        Changelog-entry: Added ov10640 dtb for D3
+        changelog-entry: Added ov10640 dtb for D3
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+    - subject: Added srd3-tx2.conf machine
+      hash: 3264f55bf49abde636cf5c339d61ef2e9eba1c6f
+      body: ''
+      footer:
+        Changelog-entry: Added srd3-tx2.conf machine
+        changelog-entry: Added srd3-tx2.conf machine
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+  version: 2.31.5+rev4
+  date: 2019-05-03T08:57:58.502Z
+- commits:
     - subject: CAN bus enablement
       hash: f6e18f32631e6ef51f0f0c0a4e524e880c85a1e0
       body: |
