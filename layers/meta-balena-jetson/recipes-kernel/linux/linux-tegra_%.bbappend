@@ -8,9 +8,10 @@ SRC_URI_append = " \
     file://tegra186-quill-p3310-1000-c03-00-base.dtb \
     file://tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb \
     file://tegra186-tx2-cti-ASG916.dtb \
+    file://d3-rsp-fpdlink-ov10640-single-j2.dtb \
     "
 
-RESIN_CONFIGS_append = " compat spi gamepad can"
+RESIN_CONFIGS_append = " compat spi gamepad can tpg"
 RESIN_CONFIGS_remove = "brcmfmac"
 
 RESIN_CONFIGS[compat] = " \
@@ -48,6 +49,10 @@ RESIN_CONFIGS[can] = " \
 		CONFIG_CAN_DEV=m \
 		CONFIG_MTTCAN=m \
 		CONFIG_MTTCAN_IVC=m \
+"
+
+RESIN_CONFIGS[tpg] = " \
+		CONFIG_VIDEO_TEGRA_VI_TPG=y \
 "
 
 TEGRA_INITRAMFS_INITRD = "0"
@@ -91,4 +96,8 @@ do_deploy_append() {
 
 do_deploy_append_n510-tx2() {
     cp ${WORKDIR}/tegra186-quill-p3310-1000-c03-00-base.dtb "${DEPLOYDIR}"
+}
+
+do_deploy_append_srd3-tx2() {
+    cp ${WORKDIR}/d3-rsp-fpdlink-ov10640-single-j2.dtb "${DEPLOYDIR}"
 }
