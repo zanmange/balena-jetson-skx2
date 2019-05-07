@@ -1,0 +1,48 @@
+From a306ebde43c3aa9ba9a744e656a1ac48354ca3d3 Mon Sep 17 00:00:00 2001
+From: Florin Sarbu <florin@balena.io>
+Date: Tue, 7 May 2019 13:25:13 +0200
+Subject: [PATCH] Add requested headers to the archive for NVidia Jetson TX2
+
+Customers compiling out of tree kernel modules related to video camera
+will require headers from drivers/media/platform/tegra/camera.
+Also, customers building out of tree modules might also make use of
+dma-iommu.h and hypervisor.h and on the Jetson TX2 kernel
+(which is 64 bits) these header files actually include their 32 bits
+counterparts so let's add those too.
+
+Upstream-Status: Inappropriate [configuration]
+Signed-off-by: Florin Sarbu <florin@balena.io>
+---
+ gen_mod_headers | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/gen_mod_headers b/gen_mod_headers
+index baa77ef..076f003 100755
+--- a/gen_mod_headers
++++ b/gen_mod_headers
+@@ -97,6 +97,9 @@ cp "${obj_dir}/.config" "${obj_dir}/Module.symvers" "$target_dir"
+ extra_header_dirs="drivers/md net/mac80211 drivers/media/dvb-core include/config/dvb \
+ drivers/media/dvb-frontends drivers/media/usb/dvb-usb drivers/media/tuners"
+ 
++# add NVidia Jetson TX2 video camera headers
++extra_header_dirs+=" drivers/media/platform/tegra/camera"
++
+ push_linux
+ trap pop EXIT
+ 
+@@ -195,6 +198,12 @@ done
+ # Fix arm64 file reference
+ if [ "$karch" = "arm64" ] && [ -f "$karch_dir/include/asm/opcodes.h" ]; then
+ 	copy_mkdir "$target_dir" "./arch/arm/include/asm/opcodes.h"
++
++        # on NVidia Jetson TX2, arch/arm64/include/asm/dma-iommu.h actually includes the following so let's add that also to the archive
++        copy_mkdir "$target_dir" "./arch/arm/include/asm/dma-iommu.h"
++
++        # on NVidia Jetson TX2, arch/arm64/include/asm/hypervisor.h and arch/arm64/include/asm/xen/hypervisor.h actually include the following so let's add that also to the archive
++        copy_mkdir "$target_dir" "./arch/arm/include/asm/xen/hypervisor.h"
+ fi
+ 
+ if [[ -n "$prefix" ]]; then
+-- 
+2.7.4
+
