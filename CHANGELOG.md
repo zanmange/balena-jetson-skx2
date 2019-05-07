@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.33.0+rev2
+## (2019-05-07)
+
+* Add requested hypervisor.h, dma-iommu.h and camera_gpio.h to the kernel modules headers archive [Florin Sarbu]
+
 # v2.33.0+rev1
 ## (2019-05-04)
 

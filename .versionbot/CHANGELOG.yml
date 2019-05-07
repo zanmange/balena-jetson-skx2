@@ -1,4 +1,28 @@
 - commits:
+    - subject: >-
+        Add requested hypervisor.h, dma-iommu.h and camera_gpio.h to the kernel
+        modules headers archive
+      hash: d9c8340198ea72839ac28125aa2fc50c33ee2365
+      body: |
+        Customers compiling out of tree kernel modules related to video camera
+        will require headers from drivers/media/platform/tegra/camera.
+        Also, customers building out of tree modules might also make use of
+        dma-iommu.h and hypervisor.h and on the Jetson TX2 kernel
+        (which is 64 bits) these header files actually include their 32 bits
+        counterparts so let's add those too.
+      footer:
+        Changelog-entry: >-
+          Add requested hypervisor.h, dma-iommu.h and camera_gpio.h to the
+          kernel modules headers archive
+        changelog-entry: >-
+          Add requested hypervisor.h, dma-iommu.h and camera_gpio.h to the
+          kernel modules headers archive
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.33.0+rev2
+  date: 2019-05-07T11:53:41.379Z
+- commits:
     - subject: Update rust to 1.33
       hash: 88a8f17792a253257c96539333553d3a734fc5d7
       body: ''
