@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.33.0+rev3
+## (2019-05-07)
+
+* Enable BT for Jetson TX2 based boards [Vicentiu Galanopulo]
+
 # v2.33.0+rev2
 ## (2019-05-07)
 

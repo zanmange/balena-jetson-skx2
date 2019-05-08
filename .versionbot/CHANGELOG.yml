@@ -1,4 +1,19 @@
 - commits:
+    - subject: Enable BT for Jetson TX2 based boards
+      hash: 24542255a5c0eafb3f9db102ceb5602bf3972739
+      body: |
+        The HCI UART device /dev/ttyTHS3 is used for
+        bluetooth and the hciattach command needs to
+        be done before starting the bluetooth.service.
+      footer:
+        Changelog-entry: Enable BT for Jetson TX2 based boards
+        changelog-entry: Enable BT for Jetson TX2 based boards
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+  version: 2.33.0+rev3
+  date: 2019-05-07T15:14:36.331Z
+- commits:
     - subject: >-
         Add requested hypervisor.h, dma-iommu.h and camera_gpio.h to the kernel
         modules headers archive
