@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.33.0+rev4
+## (2019-05-08)
+
+* Add icon for srd3-tx2 [Florin Sarbu]
+
 # v2.33.0+rev3
 ## (2019-05-07)
 

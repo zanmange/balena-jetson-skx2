@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add icon for srd3-tx2
+      hash: 15843d347d454e805d804cf4df45bbd6b93a28a8
+      body: ''
+      footer:
+        Changelog-entry: Add icon for srd3-tx2
+        changelog-entry: Add icon for srd3-tx2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.33.0+rev4
+  date: 2019-05-08T05:50:07.990Z
+- commits:
     - subject: Enable BT for Jetson TX2 based boards
       hash: 24542255a5c0eafb3f9db102ceb5602bf3972739
       body: |
