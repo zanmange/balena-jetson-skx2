@@ -1,4 +1,33 @@
 - commits:
+    - subject: >-
+        Set VIDEO_TEGRA_VI_TPG as built-in only for machines that have the
+        hardware
+      hash: 1a5cc68e3b71d36e48b3be48eb82983613dfbe1c
+      body: |
+        Having this enabled on all machines, for example the TX2 devkit,
+        the kernel crashes in the following way:
+
+        Call trace:
+        [<ffffffc001106664>] tpg_probe_t18x+0x44/0x1a4
+        [<ffffffc000081d40>] do_one_initcall+0xd0/0x1f0
+        [<ffffffc0010cdbe4>] kernel_init_freeable+0x1d4/0x278
+        [<ffffffc000b5e158>] kernel_init+0x18/0xe0
+        [<ffffffc000084f90>] ret_from_fork+0x10/0x40
+         ---[ end trace 3074e38319bcd9c9 ]---
+        Kernel panic - not syncing: Attempted to kill init! exitcode=0x0000000b
+      footer:
+        Changelog-entry: >-
+          Set VIDEO_TEGRA_VI_TPG as built-in only for machines that have the
+          hardware
+        changelog-entry: >-
+          Set VIDEO_TEGRA_VI_TPG as built-in only for machines that have the
+          hardware
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.33.0+rev5
+  date: 2019-05-09T12:12:30.019Z
+- commits:
     - subject: Add icon for srd3-tx2
       hash: 15843d347d454e805d804cf4df45bbd6b93a28a8
       body: ''

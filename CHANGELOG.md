@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.33.0+rev5
+## (2019-05-09)
+
+* Set VIDEO_TEGRA_VI_TPG as built-in only for machines that have the hardware [Florin Sarbu]
+
 # v2.33.0+rev4
 ## (2019-05-08)
 
