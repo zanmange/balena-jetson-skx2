@@ -11,7 +11,7 @@ SRC_URI_append = " \
     file://d3-rsp-fpdlink-ov10640-single-j2.dtb \
     "
 
-RESIN_CONFIGS_append = " compat spi gamepad can tpg"
+RESIN_CONFIGS_append = " compat spi gamepad can"
 RESIN_CONFIGS_remove = "brcmfmac"
 
 RESIN_CONFIGS[compat] = " \
@@ -51,6 +51,7 @@ RESIN_CONFIGS[can] = " \
 		CONFIG_MTTCAN_IVC=m \
 "
 
+RESIN_CONFIGS_append_srd3-tx2 = " tpg"
 RESIN_CONFIGS[tpg] = " \
 		CONFIG_VIDEO_TEGRA_VI_TPG=y \
 "
