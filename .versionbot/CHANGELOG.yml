@@ -1,4 +1,22 @@
 - commits:
+    - subject: Compile video tpg as external module
+      hash: 5bbb8502d631f1ca6d4978758530fa20040db0a4
+      body: |
+        The nvhost-vi-tpg module was added as part of the kernel
+        but the following oops was showing up on all tx2-boards:
+        Unable to handle kernel NULL pointer dereference at
+        virtual address 00000000
+        PC is at tpg_probe_t18x+0x44/0x1a4
+        LR is at tpg_probe_t18x+0x34/0x1a4
+      footer:
+        Changelog-entry: Compile video tpg as external module
+        changelog-entry: Compile video tpg as external module
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+  version: 2.33.0+rev5
+  date: 2019-05-09T15:07:05.980Z
+- commits:
     - subject: Add icon for srd3-tx2
       hash: 15843d347d454e805d804cf4df45bbd6b93a28a8
       body: ''

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.33.0+rev5
+## (2019-05-09)
+
+* Compile video tpg as external module [Vicentiu Galanopulo]
+
 # v2.33.0+rev4
 ## (2019-05-08)
 
