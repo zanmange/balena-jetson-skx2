@@ -51,9 +51,14 @@ RESIN_CONFIGS[can] = " \
 		CONFIG_MTTCAN_IVC=m \
 "
 
+RESIN_CONFIGS_append_srd3-tx2 = " tpg"
+
 RESIN_CONFIGS[tpg] = " \
-		CONFIG_VIDEO_TEGRA_VI_TPG=y \
+		CONFIG_VIDEO_TEGRA_VI_TPG=m \
 "
+
+KERNEL_MODULE_AUTOLOAD_srd3-tx2 += "nvhost-vi-tpg"
+KERNEL_MODULE_PROBECONF_srd3-tx2 += "nvhost-vi-tpg"
 
 TEGRA_INITRAMFS_INITRD = "0"
 
