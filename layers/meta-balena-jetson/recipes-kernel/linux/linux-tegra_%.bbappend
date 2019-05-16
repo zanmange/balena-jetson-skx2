@@ -9,6 +9,7 @@ SRC_URI_append = " \
     file://tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb \
     file://tegra186-tx2-cti-ASG916.dtb \
     file://d3-rsp-fpdlink-ov10640-single-j2.dtb \
+    file://tegra186-tx2-blackboard.dtb \
     "
 
 RESIN_CONFIGS_append = " compat spi gamepad can tpg"
@@ -105,4 +106,8 @@ do_deploy_append_n510-tx2() {
 
 do_deploy_append_srd3-tx2() {
     cp ${WORKDIR}/d3-rsp-fpdlink-ov10640-single-j2.dtb "${DEPLOYDIR}"
+}
+
+do_deploy_append_blackboard-tx2() {
+    cp ${WORKDIR}/tegra186-tx2-blackboard.dtb "${DEPLOYDIR}"
 }
