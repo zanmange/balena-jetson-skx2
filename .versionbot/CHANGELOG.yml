@@ -1,4 +1,37 @@
 - commits:
+    - subject: Add blackboard-tx2.conf machine
+      hash: a055112465c648a867027643a5db65814480dcfd
+      body: ''
+      footer:
+        Changelog-entry: Add blackboard-tx2.conf machine
+        changelog-entry: Add blackboard-tx2.conf machine
+        Signed-off-by: Sebastien Collier <sebastien@black.ai>
+        signed-off-by: Sebastien Collier <sebastien@black.ai>
+      author: Sebastien Collier
+    - subject: Added custom dtb file for blackboard-tx2
+      hash: 5bf9f0126d17095975c8ab4f19a98fe0fc1d322c
+      body: |
+        The custom device tree to enable features for the blackboard carrier
+      footer:
+        Changelog-entry: Added custom dtb file for blackboard-tx2
+        changelog-entry: Added custom dtb file for blackboard-tx2
+        Signed-off-by: Sebastien Collier <sebastien@black.ai>
+        signed-off-by: Sebastien Collier <sebastien@black.ai>
+      author: Sebastien Collier
+    - subject: Added custom blackboard-tx2 dtb to tegra186-flash-dry
+      hash: 974316481f79b8fe8185978ab627992a141008e6
+      body: |
+        The custom dtb for the blackboard-tx2 machine needs to be added in this
+        recipe in order to be properly signed and flashed
+      footer:
+        Changelog-entry: Added custom blackboard-tx2 dtb to tegra186-flash-dry
+        changelog-entry: Added custom blackboard-tx2 dtb to tegra186-flash-dry
+        Signed-off-by: Sebastien Collier <sebastien@black.ai>
+        signed-off-by: Sebastien Collier <sebastien@black.ai>
+      author: Sebastien Collier
+  version: 2.33.0+rev6
+  date: 2019-05-16T06:21:50.073Z
+- commits:
     - subject: Compile video tpg as external module
       hash: 5bbb8502d631f1ca6d4978758530fa20040db0a4
       body: |
