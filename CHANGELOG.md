@@ -1,6 +1,13 @@
 Change log
 -----------
 
+# v2.33.0+rev6
+## (2019-05-16)
+
+* Add blackboard-tx2.conf machine [Sebastien Collier]
+* Added custom dtb file for blackboard-tx2 [Sebastien Collier]
+* Added custom blackboard-tx2 dtb to tegra186-flash-dry [Sebastien Collier]
+
 # v2.33.0+rev5
 ## (2019-05-09)
 
