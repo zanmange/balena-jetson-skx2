@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.33.0+rev7
+## (2019-05-17)
+
+* Add icon for blackboard-tx2 machine [Sebastien Collier]
+
 # v2.33.0+rev6
 ## (2019-05-16)
 

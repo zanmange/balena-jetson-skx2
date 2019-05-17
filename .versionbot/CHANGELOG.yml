@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add icon for blackboard-tx2 machine
+      hash: fa647a67c7fbbf0f781b50c82671c4c2dea6f1ad
+      body: ''
+      footer:
+        Changelog-entry: Add icon for blackboard-tx2 machine
+        changelog-entry: Add icon for blackboard-tx2 machine
+        Signed-off-by: Sebastien Collier <sebastien@black.ai>
+        signed-off-by: Sebastien Collier <sebastien@black.ai>
+      author: Sebastien Collier
+  version: 2.33.0+rev7
+  date: 2019-05-17T09:34:55.987Z
+- commits:
     - subject: Add blackboard-tx2.conf machine
       hash: a055112465c648a867027643a5db65814480dcfd
       body: ''
