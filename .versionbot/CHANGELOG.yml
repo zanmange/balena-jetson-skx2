@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add ODMDATA field for correct USB 3.0 port mapping
+      hash: cbad1ffb38b47f95a05ecddc72ba4601a6841f4d
+      body: ''
+      footer:
+        Changelog-entry: Add ODMDATA field for correct USB 3.0 port mapping
+        changelog-entry: Add ODMDATA field for correct USB 3.0 port mapping
+        Signed-off-by: Sebastien Collier <sebastien@black.ai>
+        signed-off-by: Sebastien Collier <sebastien@black.ai>
+      author: Sebastien Collier
+  version: 2.36.0+rev3
+  date: 2019-05-24T08:25:03.021Z
+- commits:
     - subject: Update the balena-yocto-scripts submodule to v1.1.1
       hash: a4cc51f13b3a11190d9b493e098494aad6a4eaa1
       body: ''

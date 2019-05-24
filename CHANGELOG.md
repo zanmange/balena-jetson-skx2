@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.36.0+rev3
+## (2019-05-24)
+
+* Add ODMDATA field for correct USB 3.0 port mapping [Sebastien Collier]
+
 # v2.36.0+rev2
 ## (2019-05-21)
 
