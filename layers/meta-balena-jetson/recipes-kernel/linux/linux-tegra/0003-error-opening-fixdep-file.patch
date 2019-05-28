@@ -1,0 +1,33 @@
+From f818208a324b88a46c552eb6b278b0d0eb0d3c73 Mon Sep 17 00:00:00 2001
+From: Vicentiu Galanopulo <vicentiu@balena.io>
+Date: Tue, 28 May 2019 10:58:51 +0200
+Subject: [PATCH] Fix fixdep dependncy file (.d) not found
+
+Patch attempts to fix this sporadic error on the Jenkins build:
+fixdep: error opening depfile: 
+drivers/../nvidia/t18x/drivers/net/can/mttcan/native/../hal/.m_ttcan.o.d: 
+No such file or directory
+
+Upstream-Status: Inappropriate [update]
+
+Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+---
+ scripts/basic/fixdep.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scripts/basic/fixdep.c b/scripts/basic/fixdep.c
+index c68fd61..e5bf47f 100644
+--- a/scripts/basic/fixdep.c
++++ b/scripts/basic/fixdep.c
+@@ -388,7 +388,7 @@ static void print_deps(void)
+ 	if (fd < 0) {
+ 		fprintf(stderr, "fixdep: error opening depfile: ");
+ 		perror(depfile);
+-		exit(2);
++		return;
+ 	}
+ 	if (fstat(fd, &st) < 0) {
+ 		fprintf(stderr, "fixdep: error fstat'ing depfile: ");
+-- 
+2.7.4
+
