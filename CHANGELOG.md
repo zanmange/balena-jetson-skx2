@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.36.0+rev4
+## (2019-05-28)
+
+* Fix for "fixdep: file not found" error [Vicentiu Galanopulo]
+
 # v2.36.0+rev3
 ## (2019-05-24)
 

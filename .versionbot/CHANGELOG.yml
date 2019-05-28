@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'Fix for "fixdep: file not found" error'
+      hash: 98d80455db30a339a3ef9b89533c5a530561f886
+      body: |
+        When building on Jenkins a sporadic "fixdep: file not found"
+        error occurs. A patch from the upstream kernel has been added
+        to fix this.
+      footer:
+        Changelog-entry: 'Fix for "fixdep: file not found" error'
+        changelog-entry: 'Fix for "fixdep: file not found" error'
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+  version: 2.36.0+rev4
+  date: 2019-05-28T11:27:29.586Z
+- commits:
     - subject: Add ODMDATA field for correct USB 3.0 port mapping
       hash: cbad1ffb38b47f95a05ecddc72ba4601a6841f4d
       body: ''
