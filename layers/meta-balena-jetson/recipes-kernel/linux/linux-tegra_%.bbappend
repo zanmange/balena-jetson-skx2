@@ -77,7 +77,7 @@ MENU TITLE Boot Options
 LABEL primary
       MENU LABEL primary ${KERNEL_IMAGETYPE}
       LINUX /${KERNEL_IMAGETYPE}
-      APPEND ${KERNEL_ARGS} ${kernelRootspec}
+      APPEND ${KERNEL_ARGS} ${kernelRootspec} \${os_cmdline}
 EOF
     kernelRootspec="${KERNEL_ROOTSPEC_FLASHER}" ; cat >${D}/${KERNEL_IMAGEDEST}/extlinux/extlinux.conf_flasher << EOF
 DEFAULT primary
@@ -86,7 +86,7 @@ MENU TITLE Boot Options
 LABEL primary
       MENU LABEL primary ${KERNEL_IMAGETYPE}
       LINUX /${KERNEL_IMAGETYPE}
-      APPEND ${KERNEL_ARGS} ${kernelRootspec}
+      APPEND ${KERNEL_ARGS} ${kernelRootspec} \${os_cmdline}
 EOF
 }
 
