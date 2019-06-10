@@ -1,0 +1,10 @@
+[Unit]
+Description=Service file used to work around consoleblank=0 turning screen off from startup
+After=plymouth-start.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'if [[ $(cat /proc/cmdline) == *"consoleblank=0"* ]]; then echo 0 > /sys/class/graphics/fb0/blank; fi;'
+
+[Install]
+WantedBy=multi-user.target

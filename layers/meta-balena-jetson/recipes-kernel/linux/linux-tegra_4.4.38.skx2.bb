@@ -55,7 +55,7 @@ MENU TITLE Boot Options
 LABEL primary
       MENU LABEL primary ${KERNEL_IMAGETYPE}-${KERNEL_VERSION}
       LINUX /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}
-      APPEND ${KERNEL_ARGS} ${KERNEL_ROOTSPEC}
+      APPEND ${KERNEL_ARGS} ${KERNEL_ROOTSPEC} \${os_cmdline}
 EOF
     if [ -n "${INITRAMFS_IMAGE}" -a "${TEGRA_INITRAMFS_INITRD}" = "1" ]; then
         echo "      INITRD /${KERNEL_IMAGEDEST}/initrd" >> ${D}/${KERNEL_IMAGEDEST}/extlinux/extlinux.conf
