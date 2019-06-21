@@ -12,6 +12,14 @@ SRC_URI_append = " \
     file://tegra186-tx2-blackboard.dtb \
     "
 
+SRC_URI_append_jetson-tx2 = " \
+    file://0001-bcmdhd-Fix-wifi-disconnect-problems.patch \
+"
+
+SRC_URI_remove_skx2 = "  \
+    file://0001-bcmdhd-Fix-wifi-disconnect-problems.patch \
+"
+
 RESIN_CONFIGS_append = " compat spi gamepad can tpg"
 RESIN_CONFIGS_remove = "brcmfmac"
 
