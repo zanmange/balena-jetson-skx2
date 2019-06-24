@@ -21,3 +21,5 @@ device_specific_configuration() {
       START=${END}
     done
 }
+
+IMAGE_INSTALL_append_jetson-tx2 = " tegra-brcm-patchram bt-scripts"
