@@ -1,4 +1,24 @@
 - commits:
+    - subject: Fix bluetooth not working on TX2
+      hash: 7cca0edbeae3f2425694bf723559b0a4232a931d
+      body: |
+        These files are brought in from the Ubuntu demo image
+        provided by NVidia but are modified for our usecases.
+
+        We don't execute the bluetooth scripts from the udev
+        rule, instead we invoke them from the nvbtwifi* service
+        files. Also it is important to bring device up before
+        BlueZ gets the chance to interfere with it to avoid
+        intermittent failures.
+      footer:
+        Changelog-entry: Fix bluetooth not working on TX2
+        changelog-entry: Fix bluetooth not working on TX2
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.38.1+rev4
+  date: 2019-06-25T06:55:03.269Z
+- commits:
     - subject: Update the balena-yocto-scripts submodule to v1.2.3
       hash: 6de5f387581eb9628dd0b04b1d549acf7a4d135b
       body: ''

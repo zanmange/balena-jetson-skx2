@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.38.1+rev4
+## (2019-06-25)
+
+* Fix bluetooth not working on TX2 [Alexandru Costache]
+
 # v2.38.1+rev3
 ## (2019-06-24)
 
