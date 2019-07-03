@@ -1,4 +1,20 @@
 - commits:
+    - subject: 'Fix for "m_ttcan.o: file truncated" error'
+      hash: 7f570da9123ca84ee7d6e981ff4214e535a4fd86
+      body: |
+        Patch for sporadic Jenkins build error:
+        LD [M]  drivers/../nvidia/t18x/drivers/net/can/mttcan/ivc/mttcan_ivc.o
+        | drivers/../nvidia/t18x/drivers/net/can/mttcan/ivc/../hal/m_ttcan.o:
+        file not recognized: File truncated
+      footer:
+        Changelog-entry: 'Fix for "m_ttcan.o: file truncated" error'
+        changelog-entry: 'Fix for "m_ttcan.o: file truncated" error'
+        Signed-off-by: Vicentiu Galanopulo vicentiu@balena.io
+        signed-off-by: Vicentiu Galanopulo vicentiu@balena.io
+      author: Vicentiu Galanopulo
+  version: 2.38.1+rev5
+  date: 2019-07-03T10:59:03.759Z
+- commits:
     - subject: Fix bluetooth not working on TX2
       hash: 7cca0edbeae3f2425694bf723559b0a4232a931d
       body: |

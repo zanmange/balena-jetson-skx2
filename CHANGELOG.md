@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.38.1+rev5
+## (2019-07-03)
+
+* Fix for "m_ttcan.o: file truncated" error [Vicentiu Galanopulo]
+
 # v2.38.1+rev4
 ## (2019-06-25)
 
