@@ -9,6 +9,7 @@ SRC_URI_append = " \
 	file://realsense_camera_formats_linux-yocto_4.4.patch \
 	file://realsense_format_desc_4.4.patch \
 	file://0002-qmi_wwan-Update-from-4.14-kernel.patch \
+	file://0003-m_ttcan.c-Rename-to-m_ttcan_ext.c.patch \
 	"
 
 RESIN_CONFIGS_append = " uvc"
