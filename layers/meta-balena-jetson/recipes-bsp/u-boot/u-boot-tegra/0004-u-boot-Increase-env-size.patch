@@ -1,0 +1,30 @@
+From c6ecf9760c1f9bb7c8870139cb1e9fe8c3fdb606 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Tue, 29 Oct 2019 16:05:12 +0100
+Subject: [PATCH] u-boot: Increase env size
+
+Newer balenaOS releases require the
+env size to be increased.
+
+Upstream-status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ include/configs/tegra-common.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/configs/tegra-common.h b/include/configs/tegra-common.h
+index 4a5653e74a..c2f3450370 100644
+--- a/include/configs/tegra-common.h
++++ b/include/configs/tegra-common.h
+@@ -34,7 +34,7 @@
+ 
+ /* Environment */
+ #define CONFIG_ENV_VARS_UBOOT_CONFIG
+-#define CONFIG_ENV_SIZE			0x2000	/* Total Size Environment */
++#define CONFIG_ENV_SIZE			0x3000	/* Total Size Environment */
+ 
+ /*
+  * NS16550 Configuration
+-- 
+2.17.1
+
