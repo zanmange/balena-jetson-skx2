@@ -40,7 +40,7 @@ module.exports =
 		machine: 'srd3-tx2'
 		image: 'resin-image-flasher'
 		fstype: 'resinos-img'
-		version: 'yocto-rocko'
+		version: 'yocto-thud'
 		deployArtifact: 'resin-image-flasher-srd3-tx2.resinos-img'
 		compressed: true
 

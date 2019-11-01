@@ -1,6 +1,6 @@
 # LAYER_CONF_VERSION is increased each time build/conf/bblayers.conf
 # changes incompatibly
-POKY_BBLAYERS_CONF_VERSION = "2"
+POKY_BBLAYERS_CONF_VERSION = "3"
 
 BBPATH = "${TOPDIR}"
 BBFILES ?= ""
@@ -14,14 +14,8 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-openembedded/meta-python \
     ${TOPDIR}/../layers/meta-tegra \
     ${TOPDIR}/../layers/meta-balena/meta-balena-common \
-    ${TOPDIR}/../layers/meta-balena/meta-resin-rocko \
+    ${TOPDIR}/../layers/meta-balena/meta-balena-thud \
     ${TOPDIR}/../layers/meta-balena-jetson \
     ${TOPDIR}/../layers/meta-rust \
     "
 
-BBLAYERS_NON_REMOVABLE ?= " \
-    ${TOPDIR}/../layers/poky/meta \
-    ${TOPDIR}/../layers/poky/meta-poky \
-    ${TOPDIR}/../layers/meta-balena/meta-resin-common \
-    ${TOPDIR}/../layers/meta-balena/meta-resin-rocko \
-    "

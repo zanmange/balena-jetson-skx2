@@ -8,7 +8,7 @@ SRC_URI_append = " \
 	file://realsense_powerlinefrequency_control_fix_linux-yocto_4.4.patch \
 	file://realsense_camera_formats_linux-yocto_4.4.patch \
 	file://realsense_format_desc_4.4.patch \
-	file://0002-qmi_wwan-Update-from-4.14-kernel.patch \
+	file://0001-Backport-qmi_wwan-from-kernel-4.14-to-4.4.patch \
 	file://0003-m_ttcan.c-Rename-to-m_ttcan_ext.c.patch \
 	"
 
@@ -16,7 +16,7 @@ RESIN_CONFIGS_append = " uvc"
 
 RESIN_CONFIGS[uvc] = " \
 		CONFIG_USB_VIDEO_CLASS=m \
-		CONFIG_USB_VIDEO_CLASS_INPUT_EDEV=y \
+		CONFIG_USB_VIDEO_CLASS_INPUT_EVDEV=y \
 		"
 
 RESIN_CONFIGS_DEPS[uvc] = " \

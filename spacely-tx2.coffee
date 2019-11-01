@@ -38,7 +38,7 @@ module.exports =
 		machine: 'spacely-tx2'
 		image: 'resin-image-flasher'
 		fstype: 'resinos-img'
-		version: 'yocto-rocko'
+		version: 'yocto-thud'
 		deployArtifact: 'resin-image-flasher-spacely-tx2.resinos-img'
 		compressed: true
 

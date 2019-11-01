@@ -51,6 +51,7 @@ BOOTFILES=" \
     nvtboot_recovery_cpu.bin \
     preboot_d15_prod_cr.bin \
     slot_metadata.bin \
+    dram-ecc.bin \
     spe.bin \
     tos.img \
     nvtboot.bin \
@@ -86,6 +87,7 @@ do_configure() {
         -e"s,MB1TYPE,mb1_bootloader," -e"s,MB1FILE,mb1_prod.bin," -e"s,MB1NAME,mb1," \
         -e"s,BPFFILE,bpmp.bin," -e"s,BPFNAME,bpmp-fw," -e"s,BPFSIGN,true," \
         -e"s,BPFDTB-NAME,bpmp-fw-dtb," -e"s,BPMPDTB-SIGN,true," \
+        -e"s,DRAMECCFILE,dram-ecc.bin," -e"s,DRAMECCNAME,dram-ecc-fw," -e"s,DRAMECCTYPE,dram_ecc," \
         -e"s,TBCFILE,cboot.bin," -e"s,TBCTYPE,bootloader," -e"s,TBCNAME,cpu-bootloader," \
         -e"s,TBCDTB-NAME,bootloader-dtb," -e"s,TBCDTB-FILE,${DTBFILE}," \
         -e"s,SCEFILE,camera-rtcpu-sce.bin," -e"s,SCENAME,sce-fw," -e"s,SCESIGN,true," \
@@ -99,39 +101,27 @@ do_configure() {
 
 boot0="boot0.img"
 create_boot0_img() {
-    # Create boot table
-
-    # BCT
-    cat ${1}/br_bct_BR.bct > ${1}/${boot0}
-    cat ${1}/br_bct_BR.bct >> ${1}/${boot0}
-    dd if=/dev/zero bs=16 count=576 >> ${1}/${boot0}
-    cat ${1}/br_bct_BR.bct >> ${1}/${boot0}
-    dd if=/dev/zero bs=16 count=800 >> ${1}/${boot0}
-
-    # MB1
-    cat ${1}/mb1_prod.bin.encrypt >> ${1}/${boot0}
-    dd if=/dev/zero bs=16 count=10463 >> ${1}/${boot0}
-
-    # MB1 BCT
-    cat ${1}/mb1_cold_boot_bct_MB1_sigheader.bct.encrypt >> ${1}/${boot0}
-    dd if=/dev/zero bs=16 count=967 >> ${1}/${boot0}
-
-    # SPE
-    cat ${1}/spe_sigheader.bin.encrypt >> ${1}/${boot0}
-    dd if=/dev/zero bs=16 count=3071 >> ${1}/${boot0}
-
-    # MB2
-    cat ${1}/nvtboot_sigheader.bin.encrypt >> ${1}/${boot0}
-    dd if=/dev/zero bs=16 count=10074 >> ${1}/${boot0}
-
-    # MTS-PREBOOT
-    cat ${1}/preboot_d15_prod_cr_sigheader.bin.encrypt >> ${1}/${boot0}
-
-    # EXTRA
-    dd if=/dev/zero bs=16 count=12445 >> ${1}/${boot0}
-    dd if=${1}/slot_metadata.bin >> ${1}/${boot0}
-    dd if=/dev/zero bs=1 count=10 >> ${1}/${boot0}
-    dd if=/dev/zero bs=16 count=198654 >> ${1}/${boot0}
+    # Re-create boot table, since without this image will not boot
+    # if using HUP or sd-card to flash.
+    dd if=/dev/zero of=${1}/${boot0} bs=512  conv=notrunc count=8192
+    dd if=${1}/br_bct_BR.bct of=${1}/${boot0} bs=1 seek=0 conv=notrunc
+    dd if=${1}/br_bct_BR.bct of=${1}/${boot0} bs=1 seek=3584 conv=notrunc
+    dd if=${1}/br_bct_BR.bct of=${1}/${boot0} bs=1 seek=16384 conv=notrunc
+    dd if=${1}/mb1_prod.bin.encrypt of=${1}/${boot0} bs=1 seek=32768 conv=notrunc
+    dd if=${1}/mb1_prod.bin.encrypt of=${1}/${boot0} bs=1 seek=294912 conv=notrunc
+    # XML partitions with no designated file need special attention, because image
+    # needs to be compliant for the board to boot.
+    dd if=${1}/mb1_bct_MB1_sigheader.bct.encrypt of=${1}/${boot0} bs=1 seek=557056 conv=notrunc
+    dd if=${1}/mb1_bct_MB1_sigheader.bct.encrypt of=${1}/${boot0} bs=1 seek=622592 conv=notrunc
+    dd if=${1}/dram-ecc.bin of=${1}/${boot0} bs=1 seek=688128 conv=notrunc
+    dd if=${1}/spe_sigheader.bin.encrypt of=${1}/${boot0} bs=1 seek=729600 conv=notrunc
+    dd if=${1}/spe_sigheader.bin.encrypt of=${1}/${boot0} bs=1 seek=860672 conv=notrunc
+    dd if=${1}/nvtboot_sigheader.bin.encrypt of=${1}/${boot0} bs=1 seek=991744 conv=notrunc
+    dd if=${1}/nvtboot_sigheader.bin.encrypt of=${1}/${boot0} bs=1 seek=1253888 conv=notrunc
+    dd if=${1}/preboot_d15_prod_cr_sigheader.bin.encrypt of=${1}/${boot0} bs=1 seek=1516032 conv=notrunc
+    dd if=${1}/preboot_d15_prod_cr_sigheader.bin.encrypt of=${1}/${boot0} bs=1 seek=1778176 conv=notrunc
+    dd if=${1}/slot_metadata.bin of=${1}/${boot0} bs=1 seek=2040320 conv=notrunc
+    dd if=${1}/slot_metadata.bin of=${1}/${boot0} bs=1 seek=2044416 conv=notrunc
 }
 
 do_compile() {

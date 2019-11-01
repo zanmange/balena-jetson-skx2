@@ -103,6 +103,8 @@ LABEL primary
 EOF
 }
 
+FILES_${KERNEL_PACKAGE_NAME}-image_append = "/boot/extlinux/extlinux.conf /boot/extlinux/extlinux.conf_flasher"
+
 do_deploy_append() {
     mkdir -p "${DEPLOYDIR}"
     install -m 0600 "${D}/boot/extlinux/extlinux.conf" "${DEPLOYDIR}"

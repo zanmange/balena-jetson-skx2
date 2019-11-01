@@ -39,7 +39,7 @@ module.exports =
 		machine: 'orbitty-tx2'
 		image: 'resin-image-flasher'
 		fstype: 'resinos-img'
-		version: 'yocto-rocko'
+		version: 'yocto-thud'
 		deployArtifact: 'resin-image-flasher-orbitty-tx2.resinos-img'
 		compressed: true
 
