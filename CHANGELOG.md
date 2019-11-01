@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.45.0+rev2
+## (2019-11-01)
+
+* linux-tegra: Add logging for sporadic failure after fixdep [Alexandru Costache]
+
 # v2.45.0+rev1
 ## (2019-11-01)
 
