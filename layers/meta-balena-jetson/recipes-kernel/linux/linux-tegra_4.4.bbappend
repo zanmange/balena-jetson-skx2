@@ -10,6 +10,7 @@ SRC_URI_append = " \
 	file://realsense_format_desc_4.4.patch \
 	file://0001-Backport-qmi_wwan-from-kernel-4.14-to-4.4.patch \
 	file://0003-m_ttcan.c-Rename-to-m_ttcan_ext.c.patch \
+        file://0001-Logging-fixdep.patch \
 	"
 
 RESIN_CONFIGS_append = " uvc"

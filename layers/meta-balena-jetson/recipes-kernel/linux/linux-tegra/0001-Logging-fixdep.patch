@@ -1,0 +1,54 @@
+From 7d93ea6172d017daa30efe724909fc3adf4cb6c0 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Fri, 1 Nov 2019 11:19:40 +0100
+Subject: [PATCH] Test 1
+
+---
+ scripts/Makefile.build | 24 ++++++++++++++++++++----
+ 1 file changed, 20 insertions(+), 4 deletions(-)
+
+diff --git a/scripts/Makefile.build b/scripts/Makefile.build
+index 14dc6e89fd18..59dd91047b2d 100644
+--- a/scripts/Makefile.build
++++ b/scripts/Makefile.build
+@@ -252,17 +252,33 @@ define rule_cc_o_c
+ 	$(cmd_modversions_c)						  \
+ 	$(call echo-cmd,record_mcount)					  \
+ 	$(cmd_record_mcount)						  \
+-	scripts/basic/fixdep $(depfile) $@ '$(call make-cmd,cc_o_c)' >    \
+-	                                              $(dot-target).tmp;  \
++	echo '>>> Before fixdep ${dot-target}.tmp' &&                     \
++	scripts/basic/fixdep $(depfile) $@ '$(call make-cmd,cc_o_c)' > $(dot-target).tmp;  \
++	echo ">> fixdep c: ${dot-target} - $?";                           \
+ 	rm -f $(depfile);						  \
++	if [ ! -f ${dot-target}.tmp ]; then                               \
++	    echo ">>> missing dot-target c ${dot-target}.tmp";            \
++	    sleep 5;                                                      \
++	    if [ ! -f ${dot-target}.tmp ]; then                           \
++	         echo ">>> Still missing dot-target c ${dot-target}.tmp"; \
++	    fi;                                                           \
++        fi;                                                              \
+ 	mv -f $(dot-target).tmp $(dot-target).cmd
+ endef
+ 
+ define rule_as_o_S
+        $(call echo-cmd,as_o_S) $(cmd_as_o_S);                            \
+-       scripts/basic/fixdep $(depfile) $@ '$(call make-cmd,as_o_S)' >    \
+-                                                     $(dot-target).tmp;  \
++       echo '>>> Before fixdep as_o_S' &&                                \
++       scripts/basic/fixdep $(depfile) $@ '$(call make-cmd,as_o_S)' > $(dot-target).tmp;  \
++       echo ">> fixdep s: ${dot-target} - $? ";                          \
+        $(cmd_modversions_S)						 \
++       if [ ! -f ${dot-target}.tmp ]; then                               \
++           echo ">>> missing dot target s ${dot-target}.tmp";            \
++           sleep 5;                                                      \
++           if [ ! -f ${dot-target}.tmp ]; then                           \
++                echo ">>> Still missing do-target s ${dot-target}.tmp";  \
++           fi;                                                           \
++       fi;                                                               \
+        rm -f $(depfile);                                                 \
+        mv -f $(dot-target).tmp $(dot-target).cmd
+ endef
+-- 
+2.17.1
+
