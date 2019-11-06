@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update meta-rust so to include rust 1.33 support
+      hash: d35fae436bd9aa61c1f0870f5cd9994b2afb9c51
+      body: ''
+      footer:
+        Backport-to: current
+        backport-to: current
+        Changelog-entry: Update meta-rust so to include rust 1.33 support
+        changelog-entry: Update meta-rust so to include rust 1.33 support
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.31.5+rev5
+  date: 2019-11-06T13:49:25.072Z
+- commits:
     - subject: Add CONFIG_VIDEO_TEGRA_VI_TPG as built-in
       hash: c976f50dacbba90fd15928c4035d4b8d9934952c
       body: |

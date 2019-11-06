@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.31.5+rev5
+## (2019-11-06)
+
+* Update meta-rust so to include rust 1.33 support [Florin Sarbu]
+
 # v2.31.5+rev4
 ## (2019-05-03)
 
