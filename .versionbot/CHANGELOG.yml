@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.5.2
+      hash: 7a9dba975cbf477d194ed792b6c36acad0c93140
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to v1.5.2
+        changelog-entry: Update balena-yocto-scripts to v1.5.2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.45.0+rev2
+  date: 2019-11-19T09:11:15.017Z
+- commits:
     - subject: 'meta-tegra: Switch to thud 28.3.0'
       hash: db205c0b4ebbe04eb0b76bffa532a7765f829177
       body: ''
