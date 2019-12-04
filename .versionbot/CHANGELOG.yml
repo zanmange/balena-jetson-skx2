@@ -1,4 +1,33 @@
 - commits:
+    - subject: Update balena yocto scripts to 1.5.2
+      hash: 6f332229eebc63f121c7932922b83b348162a8a5
+      body: ''
+      footer:
+        Changelog-entry: Update balena yocto scripts to 1.5.2
+        changelog-entry: Update balena yocto scripts to 1.5.2
+        Change-type: patch
+        change-type: patch
+        Backport-to: next
+        backport-to: next
+        Signed-off-by: Giovanni Garufi <giovanni@balena.io>
+        signed-off-by: Giovanni Garufi <giovanni@balena.io>
+      author: Giovanni Garufi
+    - subject: Update meta-balena from v2.44.0 to v2.44.2
+      hash: 0c9eed8366601591669ab74183ac034f7c16eb8f
+      body: |
+        Update meta-balena from 2.44.0 to 2.44.2
+      footer:
+        Backport-to: next
+        backport-to: next
+        Changelog-entry: Update meta-balena from v2.44.0 to v2.44.2
+        changelog-entry: Update meta-balena from v2.44.0 to v2.44.2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2019.10.1
+  date: 2019-12-04T16:48:57.914Z
+- commits:
     - subject: Update meta-balena from v2.38.3 to v2.44.0
       hash: a45567fc4c5a6446543c40a628ff03752ae0c8ef
       body: |
