@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.45.1+rev2
+## (2019-12-04)
+
+* bt-scripts: Solve BT related issues [Alexandru Costache]
+
 # v2.45.1+rev1
 ## (2019-11-23)
 

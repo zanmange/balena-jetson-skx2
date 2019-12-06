@@ -1,4 +1,25 @@
 - commits:
+    - subject: 'bt-scripts: Solve BT related issues'
+      hash: 95aaa48f46b4a67c1d463b447c72d44d19f13b82
+      body: |
+        After the latest updates, some services
+        and scripts seem to no longer be necessary.
+
+        Removing them so brcm_patcram_plus is no
+        longer taking up CPU, hci0 timeouts warnings
+        are no longer present. hcitool scan works.
+
+        Tested with devkit, spacely and orrbity
+        carrier boards.
+      footer:
+        Changelog-entry: 'bt-scripts: Solve BT related issues'
+        changelog-entry: 'bt-scripts: Solve BT related issues'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.45.1+rev2
+  date: 2019-12-04T15:27:14.794Z
+- commits:
     - subject: Update meta-balena from v2.45.0 to v2.45.1
       hash: 8b781b3e778ccd7c09e2ae7264db91b2aa4c65d2
       body: |
