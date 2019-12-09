@@ -1,4 +1,47 @@
 - commits:
+    - subject: 'resin-image-initramfs: Install tegra-xusb firmware'
+      hash: 4268361609a16eb64b274bdaedfbd42f0bc47ab9
+      body: |
+        Issuing lsusb will trigger loading of the tegra
+        xusb firmware, and the first call will fail. This because
+        when the driver was loaded it failed to load firmware from
+        the initramfs as it wasn't present, and after a couple
+        retries the process was aborted.
+
+        Install firmware in initramfs so that it can
+        be loaded when the driver loads and avoid
+        usb related issues.
+      footer:
+        Backport-to: next
+        backport-to: next
+        Changelog-entry: 'resin-image-initramfs: Install tegra-xusb firmware'
+        changelog-entry: 'resin-image-initramfs: Install tegra-xusb firmware'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+    - subject: 'bt-scripts: Solve BT related issues'
+      hash: 336e902f8735fd2e535e7faae1c12a245c66e7e4
+      body: |
+        After the latest updates, some services
+        and scripts seem to no longer be necessary.
+
+        Removing them so brcm_patcram_plus is no
+        longer taking up CPU, hci0 timeouts warnings
+        are no longer present. hcitool scan works.
+
+        Tested with devkit, spacely and orrbity
+        carrier boards.
+      footer:
+        Backport-to: next
+        backport-to: next
+        Changelog-entry: 'bt-scripts: Solve BT related issues'
+        changelog-entry: 'bt-scripts: Solve BT related issues'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2019.10.2
+  date: 2019-12-09T18:30:52.664Z
+- commits:
     - subject: Update balena yocto scripts to 1.5.2
       hash: 6f332229eebc63f121c7932922b83b348162a8a5
       body: ''

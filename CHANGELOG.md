@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2019.10.2
+## (2019-12-09)
+
+* resin-image-initramfs: Install tegra-xusb firmware [Alexandru Costache]
+* bt-scripts: Solve BT related issues [Alexandru Costache]
+
 # v2019.10.1
 ## (2019-12-04)
 
