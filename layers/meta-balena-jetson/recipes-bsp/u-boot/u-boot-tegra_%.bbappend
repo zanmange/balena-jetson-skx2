@@ -11,4 +11,5 @@ SRC_URI_append = " \
   file://0002-Change-default-root-partition.patch \
   file://0003-jetson-tx2-Enable-CONFIG_CMD_SETEXPR.patch \
   file://0004-u-boot-Increase-env-size.patch \
+  file://0005-Use-default-menu-entry-from-extlinux.conf.patch \
 "
