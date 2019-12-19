@@ -1,4 +1,20 @@
 - commits:
+    - subject: 'tegra186-flash-dry: Install extlinux files to rootfs'
+      hash: b2749993d0b7ea6b0a7241f27aa17f639fc658fc
+      body: |
+        Since in this poky release u-boot is
+        not handling the extlinux files, we'll let
+        tegra186-flash-dry install them to the rootfs
+        of the normal and flasher images
+      footer:
+        Changelog-entry: 'tegra186-flash-dry: Install extlinux files to rootfs'
+        changelog-entry: 'tegra186-flash-dry: Install extlinux files to rootfs'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.45.1+rev4
+  date: 2019-12-19T16:05:26.684Z
+- commits:
     - subject: 'resin-image-initramfs: Install tegra-xusb firmware'
       hash: 9935911a78a804bc9f1049bda1b8a5f62688f723
       body: |
