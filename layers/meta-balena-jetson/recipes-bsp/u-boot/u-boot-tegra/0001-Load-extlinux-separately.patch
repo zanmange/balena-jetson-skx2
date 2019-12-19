@@ -1,0 +1,30 @@
+From e1e7cb6208b87abf739cf14508f374f60ca8cdaf Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Thu, 19 Dec 2019 15:35:12 +0100
+Subject: [PATCH] Load extlinux separately
+
+---
+ include/config_distro_bootcmd.h | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/include/config_distro_bootcmd.h b/include/config_distro_bootcmd.h
+index 078a2db..74f6dc8 100644
+--- a/include/config_distro_bootcmd.h
++++ b/include/config_distro_bootcmd.h
+@@ -379,7 +379,12 @@
+ 		"\0"                                                      \
+ 	\
+ 	"scan_dev_for_boot_part="                                         \
+-		"part list ${devtype} ${devnum} -bootable devplist; "     \
++		"if test \"0\" =  \"${devnum}\"; "                        \
++		"then "                                                   \
++		"   setenv devplist ${resin_root_part}; "                 \
++		"else "                                                   \
++		"   part list ${devtype} ${devnum} -bootable devplist; "  \
++		"fi; "                                                    \
+ 		"env exists devplist || setenv devplist $defaultdevplist; " \
+ 		"for distro_bootpart in ${devplist}; do "                 \
+ 			"if fstype ${devtype} "                           \
+-- 
+2.7.4
+

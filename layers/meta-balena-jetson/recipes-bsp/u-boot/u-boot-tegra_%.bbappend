@@ -11,5 +11,5 @@ SRC_URI_append = " \
   file://0004-u-boot-Increase-env-size.patch \
   file://0001-menu-Use-default-menu-entry-from-extlinux.conf.patch \
   file://tx2-Integrate-with-Balena-u-boot-environment.patch \
-  file://0001-uboot-Load-extlinux.conf-and-kernel-from-root-partit.patch \
+  file://0001-Load-extlinux-separately.patch \
 "
