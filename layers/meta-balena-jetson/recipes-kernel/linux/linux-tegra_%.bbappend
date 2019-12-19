@@ -25,6 +25,8 @@ SRC_URI_remove_skx2 = "  \
     file://0001-bcmdhd-Fix-wifi-disconnect-problems.patch \
 "
 
+SRCREV = "6f2579a9ccd275502c5d7909c0c9663a0c80367f"
+
 RESIN_CONFIGS_append = " compat spi gamepad can tpg"
 RESIN_CONFIGS_remove = "brcmfmac"
 
