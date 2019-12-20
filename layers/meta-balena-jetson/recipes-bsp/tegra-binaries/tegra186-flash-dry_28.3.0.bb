@@ -168,6 +168,12 @@ do_install() {
 
     cp ${WORKDIR}/partition_specification.txt ${D}/${BINARY_INSTALL_PATH}
     cp ${B}/out/${boot0} ${D}/${BINARY_INSTALL_PATH}
+
+    # extlinux will now be installed in the rootfs,
+    # near the kernel, initrd is not used
+    install -d ${D}/boot/extlinux
+    install -m 0644 ${DEPLOY_DIR_IMAGE}/extlinux.conf ${D}/boot/extlinux/extlinux.conf
+    sed -i 's/Image/boot\/Image/g' ${D}/boot/extlinux/extlinux.conf
 }
 
 do_deploy() {
@@ -176,7 +182,10 @@ do_deploy() {
     cp -r ${D}/${BINARY_INSTALL_PATH}/* ${DEPLOYDIR}/$(basename ${BINARY_INSTALL_PATH})
 }
 
-FILES_${PN} += "${BINARY_INSTALL_PATH}"
+FILES_${PN} += " \
+    ${BINARY_INSTALL_PATH} \
+    /boot/extlinux/ \
+"
 
 INHIBIT_PACKAGE_STRIP = "1"
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
