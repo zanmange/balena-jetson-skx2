@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.45.1+rev4
+## (2020-01-03)
+
+* tegra186-flash-dry: Deploy extlinux.conf to rootfs [Alexandru Costache]
+
 # v2.45.1+rev3
 ## (2019-12-09)
 

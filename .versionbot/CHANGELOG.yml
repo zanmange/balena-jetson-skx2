@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'tegra186-flash-dry: Deploy extlinux.conf to rootfs'
+      hash: b44584a47015737f8cb911a0dfca879cf445858f
+      body: |
+        Use this package to deploy the extlinux.conf file
+        to the rootfs so that the kernel can always match the
+        version of the modules it tries to load.
+      footer:
+        Changelog-entry: 'tegra186-flash-dry: Deploy extlinux.conf to rootfs'
+        changelog-entry: 'tegra186-flash-dry: Deploy extlinux.conf to rootfs'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.45.1+rev4
+  date: 2020-01-03T15:05:39.202Z
+- commits:
     - subject: 'resin-image-initramfs: Install tegra-xusb firmware'
       hash: 9935911a78a804bc9f1049bda1b8a5f62688f723
       body: |
