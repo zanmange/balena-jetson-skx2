@@ -15,7 +15,7 @@ module.exports =
 	aliases: [ 'skx2' ]
 	name: 'SKX2'
 	arch: 'aarch64'
-	state: 'experimental'
+	state: 'released'
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
