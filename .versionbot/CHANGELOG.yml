@@ -1,4 +1,29 @@
 - commits:
+    - subject: Add Gasket driver for Coral Edge TPUs
+      hash: ec11dee76f4e309255b38d9a39df02f4a2f1cace
+      body: >
+        Add the gasket and apex kernel modules to support PCIe-based Coral Edge
+        TPUs
+      footer:
+        Changelog-entry: Add Gasket driver for Coral Edge TPUs
+        changelog-entry: Add Gasket driver for Coral Edge TPUs
+        Signed-off-by: Matt Hodgson <matthodgson@mac.com>
+        signed-off-by: Matt Hodgson <matthodgson@mac.com>
+      author: Matt Hodgson
+    - subject: Add m2pcie-tx2 machine
+      hash: b9bacc8dd8765ac7c88f5a6560da0a6e58be4f14
+      body: >
+        Add a new TX2-based machine with ODMDATA set to configuration 1
+        (0x90000)
+      footer:
+        Changelog-entry: Add m2pcie-tx2 machine
+        changelog-entry: Add m2pcie-tx2 machine
+        Signed-off-by: Matt Hodgson <matthodgson@mac.com>
+        signed-off-by: Matt Hodgson <matthodgson@mac.com>
+      author: Matt Hodgson
+  version: 2.46.1+rev3
+  date: 2020-01-20T15:36:40.200Z
+- commits:
     - subject: Change the state to 'released' in the coffee files
       hash: 99b28d0d7e8cd0899fdc1ae7860d32b74c8dfd37
       body: |

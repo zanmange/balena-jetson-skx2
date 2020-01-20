@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.46.1+rev3
+## (2020-01-20)
+
+* Add Gasket driver for Coral Edge TPUs [Matt Hodgson]
+* Add m2pcie-tx2 machine [Matt Hodgson]
+
 # v2.46.1+rev2
 ## (2020-01-15)
 
