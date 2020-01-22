@@ -1,4 +1,24 @@
 - commits:
+    - subject: >-
+        Remove the usb-modeswitch patch that fixes crashes on 64 bits
+        architectures
+      hash: 9ee6e7b300a8d0c7a9a31c6a549befd37679eb3d
+      body: |
+        We will be using usb-modeswitch version 2.5.2 in meta-balena
+        and this patch is not needed anymore with this newer version.
+      footer:
+        Changelog-entry: >-
+          Remove the usb-modeswitch patch that fixes crashes on 64 bits
+          architectures
+        changelog-entry: >-
+          Remove the usb-modeswitch patch that fixes crashes on 64 bits
+          architectures
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.46.1+rev3
+  date: 2020-01-22T15:19:19.253Z
+- commits:
     - subject: Change the state to 'released' in the coffee files
       hash: 99b28d0d7e8cd0899fdc1ae7860d32b74c8dfd37
       body: |
