@@ -1,4 +1,29 @@
 - commits:
+    - subject: Add Gasket driver for Coral Edge TPUs
+      hash: 8c6c320812e0dd6b84286135b0ad00717efab167
+      body: >
+        Add the gasket and apex kernel modules to support PCIe-based Coral Edge
+        TPUs
+      footer:
+        Changelog-entry: Add Gasket driver for Coral Edge TPUs
+        changelog-entry: Add Gasket driver for Coral Edge TPUs
+        Signed-off-by: Matt Hodgson <matthodgson@mac.com>
+        signed-off-by: Matt Hodgson <matthodgson@mac.com>
+      author: Matt Hodgson
+    - subject: Add m2pcie-tx2 machine
+      hash: 33ec1669e07f1ff1e40e118a8aa68cd2a074d991
+      body: >
+        Add a new TX2-based machine with ODMDATA set to configuration 1
+        (0x90000)
+      footer:
+        Changelog-entry: Add m2pcie-tx2 machine
+        changelog-entry: Add m2pcie-tx2 machine
+        Signed-off-by: Matt Hodgson <matthodgson@mac.com>
+        signed-off-by: Matt Hodgson <matthodgson@mac.com>
+      author: Matt Hodgson
+  version: 2.46.1+rev4
+  date: 2020-01-22T20:50:57.259Z
+- commits:
     - subject: >-
         Remove the usb-modeswitch patch that fixes crashes on 64 bits
         architectures
