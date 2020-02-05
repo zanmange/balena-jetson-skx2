@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update meta-rust to include 1.36
+      hash: 86ebe7f5ca97c4a510e5d594903c995abfc25870
+      body: ''
+      footer:
+        Changelog-entry: Update meta-rust to include 1.36
+        changelog-entry: Update meta-rust to include 1.36
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+      author: Zubair Lutfullah Kakakhel
+  version: 2.46.1+rev5
+  date: 2020-02-04T14:44:02.017Z
+- commits:
     - subject: Add Gasket driver for Coral Edge TPUs
       hash: 8c6c320812e0dd6b84286135b0ad00717efab167
       body: >
