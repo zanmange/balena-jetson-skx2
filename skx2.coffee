@@ -1,12 +1,12 @@
 deviceTypesCommon = require '@resin.io/device-types/common'
 { networkOptions, commonImg, instructions } = deviceTypesCommon
 
-BOARD_POWERON = 'Press and hold for 1 second the POWER push button.'
+BOARD_POWERON = 'Connect power to the board and wait until the power button LED turns yellow (will take around 10 seconds). Next, press and hold the POWER push button until it turns white and starts flashing and then release it.'
 
 postProvisioningInstructions = [
 	instructions.BOARD_SHUTDOWN
 	instructions.REMOVE_INSTALL_MEDIA
-	instructions.BOARD_REPOWER
+	instructions.BOARD_POWERON
 ]
 
 module.exports =
