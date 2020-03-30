@@ -1,4 +1,16 @@
 - commits:
+    - subject: Improve provisioning info for skx2
+      hash: 82fa1510edd50a49cc6771bfda7450e525459fef
+      body: ''
+      footer:
+        Changelog-entry: Improve provisioning info for skx2
+        changelog-entry: Improve provisioning info for skx2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.48.0+rev2
+  date: 2020-03-30T09:02:39.479Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.5.6
       hash: 750f045a6d690b64cc57c7d2912b9fc708573940
       body: ''

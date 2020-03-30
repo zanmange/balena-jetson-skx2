@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev2
+## (2020-03-30)
+
+* Improve provisioning info for skx2 [Florin Sarbu]
+
 # v2.48.0+rev1
 ## (2020-03-26)
 
