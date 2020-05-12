@@ -1,4 +1,16 @@
 - commits:
+    - subject: Set private to false in .coffee files for the public device types
+      hash: a4297adf5f9843e25407bf18963f02016d6e713c
+      body: ''
+      footer:
+        Changelog-entry: Set private to false in .coffee files for the public device types
+        changelog-entry: Set private to false in .coffee files for the public device types
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.48.0+rev3
+  date: 2020-05-12T09:08:05.256Z
+- commits:
     - subject: Improve provisioning info for skx2
       hash: 82fa1510edd50a49cc6771bfda7450e525459fef
       body: ''
