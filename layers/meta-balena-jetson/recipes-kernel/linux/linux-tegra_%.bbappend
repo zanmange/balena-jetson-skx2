@@ -15,6 +15,7 @@ SRC_URI_append = " \
     file://0004-NFLX-2019-001-SACK-Slowness.patch \
     file://0005-NFLX-2019-001-Resour-Consump-Low-MSS.patch \
     file://0006-NFLX-2019-001-Resour-Consump-Low-MSS.patch \
+    file://tegra186-tx2-cti-ASG001-revG+.dtb \
     "
 
 SRC_URI_append_jetson-tx2 = " \
@@ -127,6 +128,7 @@ do_deploy_append() {
     cp ${WORKDIR}/tegra186-tx2-cti-ASG001-USB3.dtb "${DEPLOYDIR}"
     cp ${WORKDIR}/tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb "${DEPLOYDIR}"
     cp ${WORKDIR}/tegra186-tx2-cti-ASG916.dtb "${DEPLOYDIR}"
+    cp ${WORKDIR}/tegra186-tx2-cti-ASG001-revG+.dtb "${DEPLOYDIR}"
 }
 
 do_deploy_append_n510-tx2() {
