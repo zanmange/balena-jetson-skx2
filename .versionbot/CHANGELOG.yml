@@ -1,4 +1,20 @@
 - commits:
+    - subject: Add CTI Astro board support
+      hash: f37e82460e6773ea7fbdab472bc468e338d150c8
+      body: >
+        This adds the DTB and build references to enable builds for CTI Astro
+        revision G boards. The build completes and flashes to a test TX2 running
+        on this carrier board. USB and secondary ethernet ports are working as
+        expected.
+      footer:
+        Changelog-entry: Add CTI Astro board support
+        changelog-entry: Add CTI Astro board support
+        Signed-off-by: c-wilson <chris@ceresimaging.net>
+        signed-off-by: c-wilson <chris@ceresimaging.net>
+      author: Keenan Johnson
+  version: 2.48.0+rev4
+  date: 2020-05-27T05:14:31.810Z
+- commits:
     - subject: Set private to false in .coffee files for the public device types
       hash: a4297adf5f9843e25407bf18963f02016d6e713c
       body: ''

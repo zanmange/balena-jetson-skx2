@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev4
+## (2020-05-27)
+
+* Add CTI Astro board support [Keenan Johnson]
+
 # v2.48.0+rev3
 ## (2020-05-12)
 
