@@ -1,12 +1,6 @@
 # Supported machines
-#MACHINE ?= "jetson-tx2"
-#MACHINE ?= "n510-tx2"
-#MACHINE ?= "orbitty-tx2"
-#MACHINE ?= "skx2"
-#MACHINE ?= "spacely-tx2"
-#MACHINE ?= "srd3-tx2"
 #MACHINE ?= "blackboard-tx2"
-#MACHINE ?= "m2pcie-tx2"
+#MACHINE ?= "skx2"
 
 # We use the overlayfs docker storage driver on the Nvidia Jetson tx2
 BALENA_STORAGE = "overlay2"
