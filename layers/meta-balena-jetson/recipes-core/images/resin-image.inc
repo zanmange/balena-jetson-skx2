@@ -10,5 +10,5 @@ RESIN_BOOT_SIZE = "80960"
                                                                                                                                                                             
 PARTITION_TABLE_TYPE = "gpt"
 
-IMAGE_INSTALL_append = " tegra186-flash-dry"
+IMAGE_INSTALL_append = " tegra-binaries-prepare"
 IMAGE_INSTALL_append_jetson-tx2 = " fb-unblank"
