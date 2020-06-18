@@ -3,12 +3,6 @@ inherit kernel-resin
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
 SRC_URI_append = " \
-	file://realsense_hid_linux-yocto_4.4.patch \
-	file://realsense_metadata_linux-yocto_4.4.patch \
-	file://realsense_powerlinefrequency_control_fix_linux-yocto_4.4.patch \
-	file://realsense_camera_formats_linux-yocto_4.4.patch \
-	file://realsense_format_desc_4.4.patch \
-	file://0001-Backport-qmi_wwan-from-kernel-4.14-to-4.4.patch \
 	file://0003-m_ttcan.c-Rename-to-m_ttcan_ext.c.patch \
 	"
 
