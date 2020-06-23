@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.51.4+rev2
+## (2020-06-23)
+
+* Specify correct dtb for blackboard-tx2 when creating the flashing artifacts [Florin Sarbu]
+* Use the correct bootloader_dtb and bpmp_fw_dtb args in the tegraflash.py command line invocation [Florin Sarbu]
+
 # v2.51.4+rev1
 ## (2020-06-18)
 

@@ -1,4 +1,39 @@
 - commits:
+    - subject: >-
+        Specify correct dtb for blackboard-tx2 when creating the flashing
+        artifacts
+      hash: b91c5f6479de3c3ec0a74bb510d26105c6592c75
+      body: ''
+      footer:
+        Changelog-entry: >-
+          Specify correct dtb for blackboard-tx2 when creating the flashing
+          artifacts
+        changelog-entry: >-
+          Specify correct dtb for blackboard-tx2 when creating the flashing
+          artifacts
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: >-
+        Use the correct bootloader_dtb and bpmp_fw_dtb args in the tegraflash.py
+        command line invocation
+      hash: 5abbb7a5721f082d3a8c1483ac69e49eb5ff03d2
+      body: |
+        Let's specify the correct bootloader_dtb and bpmp_fw_dtb args in the
+        tegraflash.py command line invocation.
+      footer:
+        Changelog-entry: >-
+          Use the correct bootloader_dtb and bpmp_fw_dtb args in the
+          tegraflash.py command line invocation
+        changelog-entry: >-
+          Use the correct bootloader_dtb and bpmp_fw_dtb args in the
+          tegraflash.py command line invocation
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.51.4+rev2
+  date: 2020-06-23T09:13:01.381Z
+- commits:
     - subject: 'recipes-containers/balena: Use separate service to load healtcheck image'
       hash: 25e4410eebe020d4fc5e6a92619a0288a5c76a41
       body: |
