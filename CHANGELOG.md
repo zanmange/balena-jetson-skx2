@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.51.5+rev1
+## (2020-06-24)
+
+* Update balena-yocto-scripts to v1.8.0 [Florin Sarbu]
+
+<details>
+<summary> Update meta-balena from v2.51.4 to v2.51.5 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.51.5
+> ### (2020-06-18)
+> 
+> * Set chrony default servers as pools [Matthew McGinn]
+</details>
+
 # v2.51.4+rev1
 ## (2020-06-18)
 
