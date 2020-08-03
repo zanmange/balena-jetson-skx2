@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.53.11+rev2
+## (2020-08-03)
+
+* Set private to false for blackboard-tx2 [Florin Sarbu]
+
 # v2.53.11+rev1
 ## (2020-08-03)
 

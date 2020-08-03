@@ -1,4 +1,17 @@
 - commits:
+    - subject: Set private to false for blackboard-tx2
+      hash: 15dbc363343bc790136346fe19a8203013de0162
+      body: ''
+      footer:
+        Changelog-entry: Set private to false for blackboard-tx2
+        changelog-entry: Set private to false for blackboard-tx2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.53.11+rev2
+  date: 2020-08-03T15:50:57.883Z
+- commits:
     - subject: Update meta-balena from v2.52.7 to v2.53.11
       hash: e03f7d5a9b72224cb9d21a69dea91fccb0732b63
       body: |
