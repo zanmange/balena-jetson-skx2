@@ -17,6 +17,7 @@ module.exports =
 	name: 'Nvidia blackboard TX2'
 	arch: 'aarch64'
 	state: 'released'
+	private: false
 	community: true
 
 	stateInstructions:
