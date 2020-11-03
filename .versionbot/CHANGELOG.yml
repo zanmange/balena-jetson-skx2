@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update meta-balena from v2.50.8 to v2.50.10
+      hash: e3297fbd39102adc6f14bc4d9ec6aea6b1f74980
+      body: |
+        Update meta-balena from 2.50.8 to 2.50.10
+      footer:
+        Changelog-entry: Update meta-balena from v2.50.8 to v2.50.10
+        changelog-entry: Update meta-balena from v2.50.8 to v2.50.10
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2020.07.2
+  date: 2020-11-03T13:07:54.449Z
+- commits:
     - subject: Update meta-balena from v2.48.0 to v2.50.8
       hash: cbd99b5a2582a812dc01ddd8ec6b410f9248d480
       body: |
