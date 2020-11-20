@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'initrdscripts: Do not override dataexpander from meta-balena'
+      hash: 8a8e1c508e6779b70ad95977e3ef3b151429c4dc
+      body: |
+        The device layer should use the resindataexpander script
+        from meta-balena.
+      footer:
+        Changelog-entry: 'initrdscripts: Do not override dataexpander from meta-balena'
+        changelog-entry: 'initrdscripts: Do not override dataexpander from meta-balena'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.53.11+rev3
+  date: 2020-11-20T18:58:03.524Z
+- commits:
     - subject: Set private to false for blackboard-tx2
       hash: 15dbc363343bc790136346fe19a8203013de0162
       body: ''
